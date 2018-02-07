@@ -110,7 +110,7 @@ MonoBehaviour:
   m_MinSize: {x: 713, y: 492}
   m_MaxSize: {x: 18008, y: 14042}
   vertical: 0
-  controlID: 19573
+  controlID: 5868
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -134,7 +134,7 @@ MonoBehaviour:
   m_MinSize: {x: 202, y: 442}
   m_MaxSize: {x: 4002, y: 8042}
   vertical: 1
-  controlID: 19574
+  controlID: 5869
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -210,7 +210,7 @@ MonoBehaviour:
   m_MinSize: {x: 234, y: 492}
   m_MaxSize: {x: 10004, y: 14042}
   vertical: 1
-  controlID: 19605
+  controlID: 6009
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -423,13 +423,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: -0.0097368965, y: -0.98865676, z: 0.13066044, w: -0.073679134}
+    m_Target: {x: 0.030527297, y: -0.96853805, z: 0.19522129, w: 0.15144938}
     speed: 2
-    m_Value: {x: 0.0097368965, y: 0.98865676, z: -0.13066044, w: 0.073679134}
+    m_Value: {x: -0.030526595, y: 0.96851575, z: -0.1952168, w: -0.1514459}
   m_Size:
-    m_Target: 7.0220327
+    m_Target: 25.963736
     speed: 2
-    m_Value: 7.0220327
+    m_Value: 25.963736
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -472,14 +472,14 @@ MonoBehaviour:
     m_KeySerializationHelper:
     - {fileID: 1107279618459433796, guid: 16ba55dae08aaca41895b114d882fb3c, type: 2}
     m_ValueSerializationHelper:
-    - e00: 0.56210524
+    - e00: 0.5279333
       e01: 0
       e02: 0
-      e03: -13.105255
+      e03: 14.683441
       e10: 0
-      e11: 0.56210524
+      e11: 0.5279333
       e12: 0
-      e13: 125.600006
+      e13: 135.8375
       e20: 0
       e21: 0
       e22: 1
@@ -557,9 +557,9 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: ee1e0100
-    m_LastClickedID: 73454
-    m_ExpandedIDs: 6878f6ff3290f7ff1c5af9fffe77f9ff0078f9ff0278f9ffe6a7faffb6a8faff8ea9faff88b2faff8ab2faff50b9faffcc27fbff227bfbff2a26fdff523dfdff5282fdffd8c6fdff76d5feff9a12ffffb88bffffba93ffff14a2ffff78c2ffffd4ceffffb2e5ffff96fbffff0000000098300000
+    m_SelectedIDs: 6a280000
+    m_LastClickedID: 10346
+    m_ExpandedIDs: 96fbffff00000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -621,20 +621,20 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Scripts
+    - Assets/Materials
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Scripts
+  - Assets/Materials
   m_LastFoldersGridSize: 16
   m_LastProjectPath: C:\Users\Ltrmex\Desktop\Group Project\Third-Year-Main-Project\Project\Revelation
     of Worlds
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: ac270000
-    m_LastClickedID: 10156
-    m_ExpandedIDs: 00000000a8270000a02b0000c0c3000074c4000000ca9a3bffffff7f
+    m_SelectedIDs: 2a2a0000
+    m_LastClickedID: 10794
+    m_ExpandedIDs: 00000000c4270000aa280000ac280000ae28000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -662,7 +662,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000a8270000a02b0000c0c3000074c4000000ca9a3bffffff7f
+    m_ExpandedIDs: 00000000c4270000aa280000ac280000ae28000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 

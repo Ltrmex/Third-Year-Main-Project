@@ -4,7 +4,7 @@ using System.Collections;
 /* 
 Author: Maciej Majchrzak
 Student Number: G00332746
-Date: 06-02-2018
+Date: 07-02-2018
 Tutorial Reference: https://unity3d.com/learn/tutorials/s/survival-shooter-tutorial
 NOTE: Code was developed with the aid of the tutorial mentioned above     
 */
