@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 /* 
 Author: Maciej Majchrzak
@@ -14,8 +15,8 @@ public class PlayerMovement : MonoBehaviour {
 
     // Private Variables
     Vector3 movement;   // direction of the player's movement
-    Animator animator;  // animator component
     Rigidbody playerRigidbody;  // player's rigidbody.
+    Animator myAnimator;
     int floorMask;  // casting of ray at game objects
     float camRayLength = 100f;  // length of the ray from the camera into the scene
 
@@ -25,7 +26,7 @@ public class PlayerMovement : MonoBehaviour {
         floorMask = LayerMask.GetMask("Floor");
 
         // Set up references
-        animator = GetComponent<Animator>();
+        myAnimator = GetComponent<Animator>();
         playerRigidbody = GetComponent<Rigidbody>();
     }   // Awake
 
@@ -35,9 +36,17 @@ public class PlayerMovement : MonoBehaviour {
         float h = Input.GetAxisRaw("Horizontal");
         float v = Input.GetAxisRaw("Vertical");
 
+        Boolean animate = false;
+
         Move(h, v); // player's movement
         Turning();  // player facing mouse cursor
-        Animating(h, v);    // player's animation
+
+        // Trying to get the player to jump
+        if (Input.GetKeyDown(KeyCode.Space))
+            animate = true;
+
+        myAnimator.SetBool("Jump", animate);
+
     } // FixedUpdate
 
     // Movement of the player
@@ -47,6 +56,7 @@ public class PlayerMovement : MonoBehaviour {
 
         // Move the player
         playerRigidbody.MovePosition(transform.position + movement);
+
     } // Move
 
     // Turning of the character towards the direction of the mouse
@@ -65,17 +75,8 @@ public class PlayerMovement : MonoBehaviour {
 
             // Player's new rotation
             playerRigidbody.MoveRotation(newRotation);
-        }
+        }   // if
     } // Turning
-
-    // Animation of the character
-    public void Animating(float h, float v) {
-        // Check if player is moving
-        bool walking = h != 0f || v != 0f;
-
-        // Determines whenever animation happens or not
-        animator.SetBool("IsWalking", walking);
-    } // Animating
 
 } // PlayerMovement
 
