@@ -11,11 +11,11 @@ public class EnemyMovement : MonoBehaviour {
 
     //Potision of the player
     Transform player;               
-    /*
-     * Will be use later when setting up the health option for player and enemy
+    
+    //Will be use later when setting up the health option for player and enemy
     PlayerHealth playerHealth;     
     EnemyHealth enemyHealth; 
-    */
+    
     // Reference to the nav mesh agent
     NavMeshAgent nav;               
 
@@ -25,10 +25,10 @@ public class EnemyMovement : MonoBehaviour {
         // Set up the references
         player = GameObject.FindGameObjectWithTag("Player").transform;
 
-        /*Part of health code
-        //playerHealth = player.GetComponent<PlayerHealth>();
-        //enemyHealth = GetComponent<EnemyHealth>();
-        */
+        //Part of health code
+        playerHealth = player.GetComponent<PlayerHealth>();
+        enemyHealth = GetComponent<EnemyHealth>();
+
 
         nav = GetComponent<NavMeshAgent>();
     }
