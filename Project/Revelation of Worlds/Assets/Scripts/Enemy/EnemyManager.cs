@@ -10,10 +10,14 @@ public class EnemyManager : MonoBehaviour
 
     void Start ()
     {
+        // https://docs.unity3d.com/ScriptReference/Object.FindObjectOfType.html
+        // Procedural Level Generation - Randomise Dungeon Rooms
+        // Strafe, Binding of Isaac, 
         // Call the Spawn function after a delay of the spawnTime and then continue to call after the same amount of time.
-        InvokeRepeating ("Spawn", spawnTime, spawnTime);
+        InvokeRepeating("Spawn", spawnTime, spawnTime);
+        playerHealth = (PlayerHealth)FindObjectOfType(typeof(PlayerHealth));
     }
-    
+
 
     void Spawn ()
     {
