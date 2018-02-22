@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.4363285, g: 0.47471064, b: 0.5147117, a: 1}
+  m_IndirectSpecularColor: {r: 0.43632868, g: 0.47471106, b: 0.5147117, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -1753,6 +1753,35 @@ Prefab:
       propertyPath: damageImage
       value: 
       objectReference: {fileID: 1036920729}
+    - target: {fileID: 54731441273886464, guid: a799d3193dcb0ad4bb7484570675fa96,
+        type: 2}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 95274979803328458, guid: a799d3193dcb0ad4bb7484570675fa96,
+        type: 2}
+      propertyPath: m_Avatar
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 23262151133313186, guid: a799d3193dcb0ad4bb7484570675fa96,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4143748223579982, guid: a799d3193dcb0ad4bb7484570675fa96, type: 2}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 33142935355985450, guid: a799d3193dcb0ad4bb7484570675fa96,
+        type: 2}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 4300006, guid: b235179bd2a63d1468dd430670338c55, type: 3}
+    - target: {fileID: 23262151133313186, guid: a799d3193dcb0ad4bb7484570675fa96,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9bc8cc7b53165cb438c7432c830dcddd, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a799d3193dcb0ad4bb7484570675fa96, type: 2}
   m_IsPrefabParent: 0
@@ -1860,7 +1889,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 85bde49e81ed4444bbc09160668ea77e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1898,7 +1927,7 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2027831471}
-  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 4300052, guid: d05d496cb4f43c14e80630addd23652e, type: 3}
 --- !u!1 &2080424367
 GameObject:
   m_ObjectHideFlags: 0
