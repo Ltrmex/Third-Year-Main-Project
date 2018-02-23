@@ -5,6 +5,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Revelation of Worlds", "Rev
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Revelation of Worlds.Plugins", "Revelation of Worlds.Plugins.csproj", "{8EF619C4-6F7E-6DD9-191A-87C43173E917}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Revelation of Worlds.Editor", "Revelation of Worlds.Editor.csproj", "{02915A4C-166B-43C9-19E7-E8166F39E1F5}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Revelation of Worlds.Editor.Plugins", "Revelation of Worlds.Editor.Plugins.csproj", "{9D2CC188-A931-DAB2-CFE4-E7BCA3DE5FF2}"
 EndProject
 Global
@@ -21,6 +23,10 @@ Global
 		{8EF619C4-6F7E-6DD9-191A-87C43173E917}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8EF619C4-6F7E-6DD9-191A-87C43173E917}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8EF619C4-6F7E-6DD9-191A-87C43173E917}.Release|Any CPU.Build.0 = Release|Any CPU
+		{02915A4C-166B-43C9-19E7-E8166F39E1F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{02915A4C-166B-43C9-19E7-E8166F39E1F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{02915A4C-166B-43C9-19E7-E8166F39E1F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{02915A4C-166B-43C9-19E7-E8166F39E1F5}.Release|Any CPU.Build.0 = Release|Any CPU
 		{9D2CC188-A931-DAB2-CFE4-E7BCA3DE5FF2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{9D2CC188-A931-DAB2-CFE4-E7BCA3DE5FF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9D2CC188-A931-DAB2-CFE4-E7BCA3DE5FF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
