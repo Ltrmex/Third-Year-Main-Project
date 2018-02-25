@@ -5,22 +5,47 @@ using UnityEngine;
 public class Rainbow : MonoBehaviour {
 
     public int digit = 0;
+    public GameObject[] buttons;
+
     static int[] solution = {1, 2, 3, 4, 5, 6, 7};
-    private static int[] input = {-1, -1, -1, -1, -1, -1, -1};
 
-    public float colourChangeDelay = 0.5f;
-    float currentDelay = 0f;
-    bool colourChangeCollision = false;
-    Color32 color;
+    private Color32 color;
+    private static int pressCount = 0;
+    private static int[] input = { -1, -1, -1, -1, -1, -1, -1 };
+    
 
-    void OnCollisionEnter(Collision other)
-    {
-        colourChangeCollision = true;
-        currentDelay = Time.time + colourChangeDelay;
+    void OnMouseDown() {
+        determineColor();
+
+        for (int i = 0; i < 6; i++)
+            input[i] = input[i + 1];
+
+        input[6] = digit;
+
+        transform.GetComponent<Renderer>().material.color = color;
+
+        checkSolution();
     }
 
-    void checkColourChange()
-    {
+    void checkSolution() {
+        ++pressCount;
+
+        if (solution[0] == input[0] && solution[1] == input[1] && solution[2] == input[2] && solution[3] == input[3] && solution[4] == input[4] && solution[5] == input[5] && solution[6] == input[6]) {
+            Debug.Log("Correct Answer");
+        }
+
+        else if(pressCount == 7){
+            for (int i = 0; i < 6; i++) {
+                buttons[i].transform.GetComponent<Renderer>().material.color = Color.white;
+                input[i] = -1;
+            }
+
+            pressCount = 0;
+            Debug.Log("Wrong Answer");
+        }
+    }
+
+    void determineColor() {
         switch (digit) {
             case 1:
                 color = new Color32(255, 0, 0, 0);   //  red
@@ -44,21 +69,9 @@ public class Rainbow : MonoBehaviour {
                 color = new Color32(238, 130, 238, 0);    //  violet
                 break;
         }
-
-        if (colourChangeCollision)
-        {
-            this.transform.GetComponent<Renderer>().material.color = color;
-
-            if (Time.time > currentDelay)
-            {
-                this.transform.GetComponent<Renderer>().material.color = Color.white;
-                colourChangeCollision = false;
-            }
-        }
     }
 
-    void Update()
-    {
-        checkColourChange();
+    void Start() {
+        buttons = GameObject.FindGameObjectsWithTag("RainbowPuzzle");
     }
 }

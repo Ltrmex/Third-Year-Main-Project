@@ -199,7 +199,7 @@ GameObject:
   - component: {fileID: 173195423}
   m_Layer: 0
   m_Name: Indigo
-  m_TagString: Untagged
+  m_TagString: RainbowPuzzle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -211,7 +211,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 173195418}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -10.5, y: 0.1, z: -10.5}
+  m_LocalPosition: {x: -15, y: 0.1, z: -5}
   m_LocalScale: {x: 1, y: 0.1, z: 1}
   m_Children: []
   m_Father: {fileID: 1689832376}
@@ -283,7 +283,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   digit: 6
-  colourChangeDelay: 0.5
+  buttons: []
 --- !u!1 &217093248
 GameObject:
   m_ObjectHideFlags: 0
@@ -448,7 +448,7 @@ GameObject:
   - component: {fileID: 261405214}
   m_Layer: 0
   m_Name: Green
-  m_TagString: Untagged
+  m_TagString: RainbowPuzzle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -460,7 +460,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 261405209}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.1, z: -7.5}
+  m_LocalPosition: {x: -5, y: 0.1, z: -10}
   m_LocalScale: {x: 1, y: 0.1, z: 1}
   m_Children: []
   m_Father: {fileID: 1689832376}
@@ -532,7 +532,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   digit: 4
-  colourChangeDelay: 0.5
+  buttons: []
 --- !u!114 &385305497
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -957,7 +957,7 @@ GameObject:
   - component: {fileID: 768813420}
   m_Layer: 0
   m_Name: Blue
-  m_TagString: Untagged
+  m_TagString: RainbowPuzzle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -969,7 +969,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 768813415}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 10.5, y: 0.1, z: 10.5}
+  m_LocalPosition: {x: -15, y: 0.1, z: -10}
   m_LocalScale: {x: 1, y: 0.1, z: 1}
   m_Children: []
   m_Father: {fileID: 1689832376}
@@ -1041,7 +1041,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   digit: 5
-  colourChangeDelay: 0.5
+  buttons: []
 --- !u!1 &772198659
 GameObject:
   m_ObjectHideFlags: 0
@@ -1192,7 +1192,7 @@ GameObject:
   - component: {fileID: 1063878237}
   m_Layer: 0
   m_Name: Violet
-  m_TagString: Untagged
+  m_TagString: RainbowPuzzle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -1204,7 +1204,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1063878232}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.1, z: 0}
+  m_LocalPosition: {x: -15, y: 0.1, z: 0}
   m_LocalScale: {x: 1, y: 0.1, z: 1}
   m_Children: []
   m_Father: {fileID: 1689832376}
@@ -1276,7 +1276,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   digit: 7
-  colourChangeDelay: 0.5
+  buttons: []
 --- !u!1 &1110255439
 GameObject:
   m_ObjectHideFlags: 0
@@ -1454,7 +1454,7 @@ GameObject:
   - component: {fileID: 1402819181}
   m_Layer: 0
   m_Name: Red
-  m_TagString: Untagged
+  m_TagString: RainbowPuzzle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -1466,7 +1466,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1402819176}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.5, y: 0.1, z: 0}
+  m_LocalPosition: {x: 5, y: 0.1, z: 0}
   m_LocalScale: {x: 1, y: 0.1, z: 1}
   m_Children: []
   m_Father: {fileID: 1689832376}
@@ -1538,7 +1538,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   digit: 1
-  colourChangeDelay: 0.1
+  buttons: []
 --- !u!1 &1416643529
 GameObject:
   m_ObjectHideFlags: 0
@@ -1967,7 +1967,7 @@ GameObject:
   - component: {fileID: 1739708397}
   m_Layer: 0
   m_Name: Orange
-  m_TagString: Untagged
+  m_TagString: RainbowPuzzle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -1979,7 +1979,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1739708392}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.1, z: 7.5}
+  m_LocalPosition: {x: 5, y: 0.1, z: -5}
   m_LocalScale: {x: 1, y: 0.1, z: 1}
   m_Children: []
   m_Father: {fileID: 1689832376}
@@ -2051,7 +2051,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   digit: 2
-  colourChangeDelay: 0.5
+  buttons: []
 --- !u!1001 &1897522743
 Prefab:
   m_ObjectHideFlags: 0
@@ -2375,7 +2375,7 @@ GameObject:
   - component: {fileID: 2071694866}
   m_Layer: 0
   m_Name: Yellow
-  m_TagString: Untagged
+  m_TagString: RainbowPuzzle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -2387,7 +2387,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2071694861}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -7.5, y: 0.1, z: 0}
+  m_LocalPosition: {x: 5, y: 0.1, z: -10}
   m_LocalScale: {x: 1, y: 0.1, z: 1}
   m_Children: []
   m_Father: {fileID: 1689832376}
@@ -2459,7 +2459,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   digit: 3
-  colourChangeDelay: 0.5
+  buttons: []
 --- !u!1 &2127425693
 GameObject:
   m_ObjectHideFlags: 0
