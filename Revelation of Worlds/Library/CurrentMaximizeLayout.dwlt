@@ -21,10 +21,10 @@ MonoBehaviour:
     y: 30
     width: 1366
     height: 635
-  m_MinSize: {x: 713, y: 492}
-  m_MaxSize: {x: 18008, y: 14042}
+  m_MinSize: {x: 711, y: 471}
+  m_MaxSize: {x: 18006, y: 14021}
   vertical: 0
-  controlID: 12069
+  controlID: 151
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -122,10 +122,10 @@ MonoBehaviour:
     y: 0
     width: 699
     height: 635
-  m_MinSize: {x: 202, y: 442}
-  m_MaxSize: {x: 4002, y: 8042}
+  m_MinSize: {x: 202, y: 421}
+  m_MaxSize: {x: 4002, y: 8021}
   vertical: 1
-  controlID: 11928
+  controlID: 53
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -144,8 +144,8 @@ MonoBehaviour:
     y: 0
     width: 699
     height: 348
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 5}
   m_Panes:
   - {fileID: 5}
@@ -359,12 +359,8 @@ MonoBehaviour:
       e32: 0
       e33: 1
   m_PreviewAnimator: {fileID: 0}
-  m_AnimatorController: {fileID: 9100000, guid: f7fb8ea2105cb7a4dbbd938a84668672,
-    type: 2}
-  m_BreadCrumbs:
-  - m_Target: {fileID: 1107295658581197222, guid: f7fb8ea2105cb7a4dbbd938a84668672,
-      type: 2}
-    m_ScrollPosition: {x: 0, y: 0}
+  m_AnimatorController: {fileID: 0}
+  m_BreadCrumbs: []
   stateMachineGraph: {fileID: 0}
   stateMachineGraphGUI: {fileID: 0}
   blendTreeGraph: {fileID: 0}
@@ -420,8 +416,8 @@ MonoBehaviour:
     y: 348
     width: 699
     height: 287
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 2}
   m_Panes:
   - {fileID: 2}
@@ -447,10 +443,10 @@ MonoBehaviour:
     y: 0
     width: 348
     height: 635
-  m_MinSize: {x: 234, y: 492}
-  m_MaxSize: {x: 10004, y: 14042}
+  m_MinSize: {x: 234, y: 471}
+  m_MaxSize: {x: 10004, y: 14021}
   vertical: 1
-  controlID: 12070
+  controlID: 99
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -505,9 +501,9 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: f6730000
-    m_LastClickedID: 29686
-    m_ExpandedIDs: 10d3fbff62d3fbff74e4fbffba1dfcffe437fdfffa96fdff92f3fdff8422feff68e4feff90fbffff94fbffff000000004e420000d24b00003e7300005e730000f6730000
+    m_SelectedIDs: 96fbffff
+    m_LastClickedID: -1130
+    m_ExpandedIDs: 94fbffff96fbffff00000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -594,7 +590,7 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/dokebimusa/prefabs
+    - Assets/Standard Assets/dokebimusa/prefabs
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
@@ -605,9 +601,9 @@ MonoBehaviour:
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 6e700000
-    m_LastClickedID: 28782
-    m_ExpandedIDs: 00000000362900008c290000e42a00001e2b00006e2c0000382d0000c02d000050310000523100005431000056310000583100005a310000ea480000c853000066700000ffffff7f
+    m_SelectedIDs: 662b0000
+    m_LastClickedID: 11110
+    m_ExpandedIDs: 000000003829000090290000d8290000622a0000fa2a0000382b0000b42c0000862d00002e2e0000442e0000e0330000e2330000e4330000e6330000e8330000ea330000ec330000ffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -635,7 +631,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000362900008c290000e42a00001e2b00006e2c0000382d0000c02d000050310000523100005431000056310000583100005a310000ea480000c853000066700000ffffff7f
+    m_ExpandedIDs: 000000003829000090290000d8290000fa2a0000382b0000b42c0000862d00002e2e0000442e0000e0330000e2330000e4330000e6330000e8330000ea330000ec330000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -660,10 +656,10 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: f6730000
-    m_LastClickedInstanceID: 29686
+    m_SelectedInstanceIDs: 96fbffff
+    m_LastClickedInstanceID: -1130
     m_HadKeyboardFocusLastEvent: 0
-    m_ExpandedInstanceIDs: 322c0000022b0000da2b0000362c0000e42c0000ac2c0000aa2d0000a42b0000622d00008e2d0000f82a0000d62b000040290000000000005e280000262b0000603e0000523e0000306f0000
+    m_ExpandedInstanceIDs: 322c0000022b0000da2b0000362c0000e42c0000ac2c0000aa2d0000a42b0000622d00008e2d0000f82a0000d62b000040290000000000005e280000262b0000603e0000523e0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 

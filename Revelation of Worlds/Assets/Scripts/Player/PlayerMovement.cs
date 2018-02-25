@@ -31,7 +31,7 @@ public class PlayerMovement : MonoBehaviour {
     }   // Awake
 
     // Updates player's position
-    public void FixedUpdate() {
+    public void Update() {
         // Store the input axes
         float h = Input.GetAxisRaw("Horizontal");
         float v = Input.GetAxisRaw("Vertical");
