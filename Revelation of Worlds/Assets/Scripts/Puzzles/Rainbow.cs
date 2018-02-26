@@ -35,7 +35,7 @@ public class Rainbow : MonoBehaviour {
         }
 
         else if(pressCount == 7){
-            for (int i = 0; i < 6; i++) {
+            for (int i = 0; i < 7; i++) {
                 buttons[i].transform.GetComponent<Renderer>().material.color = Color.white;
                 input[i] = -1;
             }
