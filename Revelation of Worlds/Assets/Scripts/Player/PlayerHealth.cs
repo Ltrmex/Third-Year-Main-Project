@@ -6,12 +6,16 @@ public class PlayerHealth : MonoBehaviour
 {
     public int startingHealth = 100;                            // The amount of health the player starts the game with.
     public int currentHealth;                                   // The current health the player has.
+    public int startingShieldPower = 100;
+    public int currentShieldPower;
+    public Text shieldDisplay;
+    public Text healthDisplay;
+    public Slider shieldSlider;
     public Slider healthSlider;                                 // Reference to the UI's health bar.
     public Image damageImage;                                   // Reference to an image to flash on the screen on being hurt.
     public AudioClip deathClip;                                 // The audio clip to play when the player dies.
     public float flashSpeed = 5f;                               // The speed the damageImage will fade at.
     public Color flashColour = new Color(1f, 0f, 0f, 0.1f);     // The colour the damageImage is set to, to flash.
-
 
     Animator anim;                                              // Reference to the Animator component.
     AudioSource playerAudio;                                    // Reference to the AudioSource component.
@@ -31,6 +35,7 @@ public class PlayerHealth : MonoBehaviour
 
         // Set the initial health of the player.
         currentHealth = startingHealth;
+        currentShieldPower = startingShieldPower;
     }
 
 
@@ -51,6 +56,8 @@ public class PlayerHealth : MonoBehaviour
 
         // Reset the damaged flag.
         damaged = false;
+        healthDisplay.text = "Health: " + currentHealth;
+        shieldDisplay.text = "Shield: " + currentShieldPower;
     }
 
 
@@ -59,11 +66,17 @@ public class PlayerHealth : MonoBehaviour
         // Set the damaged flag so the screen will flash.
         damaged = true;
 
-        // Reduce the current health by the damage amount.
-        currentHealth -= amount;
+        if(currentShieldPower > 0) { 
+            currentShieldPower -= (amount + 10);
+            shieldSlider.value = currentShieldPower;
+        }
+        else { 
+            currentHealth -= amount;    // reduce the current health by the damage amount.
+            healthSlider.value = currentHealth; // set the health bar's value to the current health.
+        }
 
-        // Set the health bar's value to the current health.
-        healthSlider.value = currentHealth;
+        
+        
 
         // Play the hurt sound effect.
         //playerAudio.Play();

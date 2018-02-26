@@ -6,8 +6,8 @@ public class EnemyHealth : MonoBehaviour
     public int currentHealth;                   // The current health the enemy has.
     public float sinkSpeed = 2.5f;              // The speed at which the enemy sinks through the floor when dead.
     public int scoreValue = 10;                 // The amount added to the player's score when the enemy dies.
+    public int experienceValue = 200;
     public AudioClip deathClip;                 // The sound to play when the enemy dies.
-
 
     //Animator anim;                              // Reference to the animator.
     //AudioSource enemyAudio;                     // Reference to the audio source.
@@ -37,6 +37,7 @@ public class EnemyHealth : MonoBehaviour
             // ... move the enemy down by the sinkSpeed per second.
             transform.Translate(-Vector3.up * sinkSpeed * Time.deltaTime);
         }
+
     }
 
 
@@ -99,6 +100,7 @@ public class EnemyHealth : MonoBehaviour
 
         // Increase the score by the enemy's score value.
         ScoreManager.score += scoreValue;
+        LevelSystem.experiencePoints += experienceValue;
 
         // After 2 seconds destory the enemy.
         Destroy(gameObject, 2f);
