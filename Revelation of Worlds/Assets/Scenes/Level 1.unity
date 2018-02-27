@@ -3198,6 +3198,37 @@ Prefab:
     - {fileID: 33142935355985450, guid: a799d3193dcb0ad4bb7484570675fa96, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: a799d3193dcb0ad4bb7484570675fa96, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1897522744 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1176266038120208, guid: a799d3193dcb0ad4bb7484570675fa96,
+    type: 2}
+  m_PrefabInternal: {fileID: 1897522743}
+--- !u!114 &1897522745
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1897522744}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46cb3f808f54eaf4085457f5c0a39d7f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PlayerName: Lukas
+  PlayerXP: 0
+  PayerLevel: 1
+  PlayerHP: 50
+  Attributes:
+  - attribute: {fileID: 11400000, guid: ab975fe2652e1cb41827a2dd3ebeef84, type: 2}
+    amount: 10
+  - attribute: {fileID: 11400000, guid: 0cc9527754aa95b4da81201a756853b7, type: 2}
+    amount: 10
+  - attribute: {fileID: 11400000, guid: 1238b85f555d54f42898ae7228d6c19c, type: 2}
+    amount: 10
+  - attribute: {fileID: 11400000, guid: 781d6e789c64d3d43b1ec66fb4a9b3d9, type: 2}
+    amount: 10
+  - attribute: {fileID: 11400000, guid: 174deddd13affb8429cc5a2e82d73dd2, type: 2}
+    amount: 10
 --- !u!4 &1926187519 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4261438153659418, guid: a799d3193dcb0ad4bb7484570675fa96,
