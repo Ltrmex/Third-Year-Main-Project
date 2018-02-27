@@ -16,6 +16,9 @@ public class PlayerShooting : MonoBehaviour
     Light gunLight;                                 // Reference to the light component.
     float effectsDisplayTime = 0.2f;                // The proportion of the timeBetweenBullets that the effects will display for.
 
+    public Color startColor = Color.blue;
+    public Color endColor = Color.red;
+
     void Awake()
     {
         // Create a layer mask for the Shootable layer.
@@ -73,6 +76,10 @@ public class PlayerShooting : MonoBehaviour
         // Enable the line renderer and set it's first position to be the end of the gun.
         gunLine.enabled = true;
         gunLine.SetPosition(0, transform.position);
+
+        gunLine.material = new Material(Shader.Find("Particles/Additive"));
+        gunLine.startColor = startColor;
+        gunLine.endColor = endColor;
 
         // Set the shootRay so that it starts at the end of the gun and points forward from the barrel.
         shootRay.origin = transform.position;
