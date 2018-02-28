@@ -40,6 +40,9 @@ public class MapGenerator : MonoBehaviour {
         //  Smoothing iterations
         for (int i = 0; i < 5; i++)
             SmoothMap();
+
+        MeshGenerator meshGen = GetComponent<MeshGenerator>();
+        meshGen.GenerateMesh(map, 1);
     }   //  GenerateMap()
 
     //  Fills the map
