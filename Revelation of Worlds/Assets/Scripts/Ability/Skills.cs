@@ -17,10 +17,10 @@ namespace Ability
 
         public List<PlayerAttributes> AffectedAttributes = new List<PlayerAttributes>();
 
-        //Public Method to set the values in the Skills UI 
+        //Public Method to set the values in the Skills UI (Populate the UI)
         public void SetValues(GameObject SkillDisplayObject, PlayerStatus Player)
         {
-            //bit of error handling - make sure that a SO is used
+            //Error handling if they are not set it won't populate it, but if they are set will populate it
             if (SkillDisplayObject)
             {
                 SkillDisplay SD = SkillDisplayObject.GetComponent<SkillDisplay>();
@@ -42,28 +42,28 @@ namespace Ability
 
                 if (SD.skillAttrAmount)
                     SD.skillAttrAmount.text = "+" + AffectedAttributes[0].amount.ToString();
-            }
-        }
+            }//End of if statement
+        }//End of SetValue method
 
-        //check if the player is able to get the skill
+        //Checks if the player is able to get the skill(Checks if has enough level and XP)
         public bool CheckSkills(PlayerStatus Player)
         {
-            //check if player is the right level
+            //Checks if player is the right level
             if (Player.PlayerLevel < LevelNeeded)
                 return false;
 
-            //check if player has enough xp
+            //Checks if player has enough xp
             if (Player.PlayerXP < XPNeeded)
                 return false;
 
             //otherwise they can enable this skill
             return true;
-        }
+        }//End of CheckSkills method
 
-        //check if the player already has the skill
+        //Checks if the player already has the skill
         public bool EnableSkill(PlayerStatus Player)
         {
-            //go through all the skills that the player currently has
+            //Goes through all the skills that the player currently has
             List<Skills>.Enumerator skills = Player.PlayerSkills.GetEnumerator();
             while (skills.MoveNext())
             {
@@ -72,11 +72,11 @@ namespace Ability
                 {
                     return true;
                 }
-            }
+            }//End of while loop
             return false;
-        }
+        }//End of EnableSkills method
 
-        //get new skill
+        //Gets new skill
         public bool GetSkill(PlayerStatus Player)
         {
             int i = 0;
@@ -94,21 +94,20 @@ namespace Ability
                         PlayerAttr.Current.amount += attributes.Current.amount;
                         //mark that an attribute was updated
                         i++;
-                    }
-                }
+                    }//Enf of if
+                }//End of while
+                //If found attribute
                 if (i > 0)
                 {
-                    //reduce the XP from  the player
+                    //Reduces the XP from  the player
                     Player.PlayerXP -= this.XPNeeded;
-                    //add to the list of skills
+                    //Adds to the list of skills
                     Player.PlayerSkills.Add(this);
                     return true;
-                }
-            }
+                }//End of if
+            }//End of while loop
             return false;
-        }
-    }
-
-
-}
+        }//End of SetValues method
+    }//End of Skills class
+}//End of namespace
 

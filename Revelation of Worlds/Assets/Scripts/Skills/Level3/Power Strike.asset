@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: Power Strike
   m_EditorClassIdentifier: 
   Description: Increase Strenght by 20
-  Icon: {fileID: 21300000, guid: 7e838e588cfa3a54abe8ea22f5458286, type: 3}
+  Icon: {fileID: 21300000, guid: 6d4f7652b9310e54ca402fa99b3b3673, type: 3}
   LevelNeeded: 3
   XPNeeded: 30
   AffectedAttributes:

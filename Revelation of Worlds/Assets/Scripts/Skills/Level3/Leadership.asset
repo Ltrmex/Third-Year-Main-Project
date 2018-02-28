@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: Leadership
   m_EditorClassIdentifier: 
   Description: Increase Reason by 20
-  Icon: {fileID: 21300000, guid: f8c45999dd5e60c4f903c4b4a0a2bf9b, type: 3}
+  Icon: {fileID: 21300000, guid: ab7c0e50365a64543a7694392968d3a0, type: 3}
   LevelNeeded: 3
   XPNeeded: 30
   AffectedAttributes:

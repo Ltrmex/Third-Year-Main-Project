@@ -22,11 +22,11 @@ namespace Ability
             {
                 m_PlayerXP = value;
 
-                //If we have subscribers, then tell them xp changed :)
+                //If we have subscribers, then tell user that the xp changed
                 if (onXPChange != null)
                     onXPChange();
             }
-        }
+        }//End of PlayerXp method
 
         /* Set Listener for Player Level */
         [SerializeField]
@@ -42,7 +42,7 @@ namespace Ability
                 if (onLevelChange != null)
                     onLevelChange();
             }
-        }
+        }//End of PlayerLevel
 
 
         [Header("Player Attributes")]
@@ -63,12 +63,10 @@ namespace Ability
         public void UpdateLevel(int amount)
         {
             PlayerLevel += amount;
-        }
+        }//End of UpdateLevel method
         public void UpdateXP(int amount)
         {
             PlayerXP += amount;
-        }
-
-
-    }
-}
+        }//End of UpdateXp method
+    }//End od PlayerStatus class
+}//End of namespace

@@ -503,7 +503,7 @@ GameObject:
   - component: {fileID: 32720072}
   - component: {fileID: 32720071}
   - component: {fileID: 32720070}
-  - component: {fileID: 32720069}
+  - component: {fileID: 32720073}
   m_Layer: 5
   m_Name: Skill (1)
   m_TagString: Untagged
@@ -536,18 +536,6 @@ RectTransform:
   m_AnchoredPosition: {x: 67, y: -85.75}
   m_SizeDelta: {x: 108.17999, y: 117.62}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &32720069
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 114180240215692800, guid: 6d125fee521b5524d8f799b5295d3408,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 32720067}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &32720070
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -588,7 +576,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 32720069}
+      - m_Target: {fileID: 32720073}
         m_MethodName: GetSkill
         m_Mode: 1
         m_Arguments:
@@ -636,6 +624,26 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 32720067}
+--- !u!114 &32720073
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 32720067}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73f0f7193133f8e4f899bbb18eae395a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skill: {fileID: 11400000, guid: 6139d49171105bb4ea941e07c7967b3a, type: 2}
+  skillName: {fileID: 1721810287}
+  skillDescription: {fileID: 0}
+  skillIcon: {fileID: 1650183739}
+  skillLevel: {fileID: 1293626754}
+  skillXPNeeded: {fileID: 1056797349}
+  skillAttributes: {fileID: 857584081}
+  skillAttrAmount: {fileID: 1916241252}
+  m_PlayerHandler: {fileID: 0}
 --- !u!1 &33263787
 GameObject:
   m_ObjectHideFlags: 0
@@ -1732,7 +1740,7 @@ GameObject:
   - component: {fileID: 219256066}
   - component: {fileID: 219256065}
   - component: {fileID: 219256064}
-  - component: {fileID: 219256063}
+  - component: {fileID: 219256067}
   m_Layer: 5
   m_Name: Skill (1)
   m_TagString: Untagged
@@ -1765,18 +1773,6 @@ RectTransform:
   m_AnchoredPosition: {x: 67, y: -85.75}
   m_SizeDelta: {x: 108.17999, y: 117.62}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &219256063
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 114613116024830756, guid: 6d125fee521b5524d8f799b5295d3408,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 219256061}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &219256064
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1817,7 +1813,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 219256063}
+      - m_Target: {fileID: 219256067}
         m_MethodName: GetSkill
         m_Mode: 1
         m_Arguments:
@@ -1865,6 +1861,26 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 219256061}
+--- !u!114 &219256067
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 219256061}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73f0f7193133f8e4f899bbb18eae395a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skill: {fileID: 11400000, guid: 52523844c63e34649aa2677d872ea0b6, type: 2}
+  skillName: {fileID: 1023179144}
+  skillDescription: {fileID: 0}
+  skillIcon: {fileID: 1392443256}
+  skillLevel: {fileID: 1488321930}
+  skillXPNeeded: {fileID: 403196976}
+  skillAttributes: {fileID: 1724856407}
+  skillAttrAmount: {fileID: 1727797398}
+  m_PlayerHandler: {fileID: 0}
 --- !u!1 &246048200
 GameObject:
   m_ObjectHideFlags: 0
@@ -2061,7 +2077,6 @@ GameObject:
   - component: {fileID: 266344563}
   - component: {fileID: 266344562}
   - component: {fileID: 266344561}
-  - component: {fileID: 266344560}
   - component: {fileID: 266344564}
   m_Layer: 5
   m_Name: 'Skill '
@@ -2095,18 +2110,6 @@ RectTransform:
   m_AnchoredPosition: {x: -96.600006, y: -85.75}
   m_SizeDelta: {x: 108.17999, y: 117.62}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &266344560
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 114250982682210386, guid: 6d125fee521b5524d8f799b5295d3408,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 266344558}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &266344561
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2527,15 +2530,23 @@ RectTransform:
 --- !u!114 &361322321
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 114112880460597630, guid: 6d125fee521b5524d8f799b5295d3408,
-    type: 2}
+  m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 361322319}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
+  m_Script: {fileID: 11500000, guid: 73f0f7193133f8e4f899bbb18eae395a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  skill: {fileID: 11400000, guid: cd9bf036075d9f54c89ca64129c7178d, type: 2}
+  skillName: {fileID: 100854246}
+  skillDescription: {fileID: 0}
+  skillIcon: {fileID: 81132489}
+  skillLevel: {fileID: 1539759816}
+  skillXPNeeded: {fileID: 1405432958}
+  skillAttributes: {fileID: 0}
+  skillAttrAmount: {fileID: 1741748612}
+  m_PlayerHandler: {fileID: 0}
 --- !u!114 &361322322
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3189,6 +3200,72 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 541759652}
+--- !u!1 &545353483
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 1913419444263718, guid: 499b9b15e4c164c48ac1d59162c67e18,
+    type: 2}
+  m_PrefabInternal: {fileID: 1767642393}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 545353484}
+  - component: {fileID: 545353486}
+  - component: {fileID: 545353485}
+  m_Layer: 0
+  m_Name: EventSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &545353484
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 4053793564175308, guid: 499b9b15e4c164c48ac1d59162c67e18,
+    type: 2}
+  m_PrefabInternal: {fileID: 1767642393}
+  m_GameObject: {fileID: 545353483}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 433.5, y: 154.701, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1926187519}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &545353485
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 114851856887943478, guid: 499b9b15e4c164c48ac1d59162c67e18,
+    type: 2}
+  m_PrefabInternal: {fileID: 1767642393}
+  m_GameObject: {fileID: 545353483}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1077351063, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HorizontalAxis: Horizontal
+  m_VerticalAxis: Vertical
+  m_SubmitButton: Submit
+  m_CancelButton: Cancel
+  m_InputActionsPerSecond: 10
+  m_RepeatDelay: 0.5
+  m_ForceModuleActive: 0
+--- !u!114 &545353486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 114046504818444474, guid: 499b9b15e4c164c48ac1d59162c67e18,
+    type: 2}
+  m_PrefabInternal: {fileID: 1767642393}
+  m_GameObject: {fileID: 545353483}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -619905303, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_FirstSelected: {fileID: 0}
+  m_sendNavigationEvents: 1
+  m_DragThreshold: 5
 --- !u!1 &550037357
 GameObject:
   m_ObjectHideFlags: 0
@@ -3356,7 +3433,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &611451479
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4291,7 +4368,7 @@ GameObject:
   - component: {fileID: 793488334}
   - component: {fileID: 793488333}
   - component: {fileID: 793488332}
-  - component: {fileID: 793488331}
+  - component: {fileID: 793488335}
   m_Layer: 5
   m_Name: 'Skill '
   m_TagString: Untagged
@@ -4324,18 +4401,6 @@ RectTransform:
   m_AnchoredPosition: {x: -96.600006, y: -85.75}
   m_SizeDelta: {x: 108.17999, y: 117.62}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &793488331
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 114927237912220230, guid: 6d125fee521b5524d8f799b5295d3408,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 793488329}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &793488332
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4376,7 +4441,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 793488331}
+      - m_Target: {fileID: 793488335}
         m_MethodName: GetSkill
         m_Mode: 1
         m_Arguments:
@@ -4424,6 +4489,26 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 793488329}
+--- !u!114 &793488335
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 793488329}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73f0f7193133f8e4f899bbb18eae395a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skill: {fileID: 11400000, guid: dbf939c18e3031849ba482e051cd8832, type: 2}
+  skillName: {fileID: 1928077337}
+  skillDescription: {fileID: 0}
+  skillIcon: {fileID: 1018478811}
+  skillLevel: {fileID: 10510981}
+  skillXPNeeded: {fileID: 1280866016}
+  skillAttributes: {fileID: 2106413030}
+  skillAttrAmount: {fileID: 1814486744}
+  m_PlayerHandler: {fileID: 0}
 --- !u!1 &832891245
 GameObject:
   m_ObjectHideFlags: 0
@@ -5258,7 +5343,7 @@ GameObject:
   - component: {fileID: 1015711939}
   - component: {fileID: 1015711938}
   - component: {fileID: 1015711937}
-  - component: {fileID: 1015711936}
+  - component: {fileID: 1015711940}
   m_Layer: 5
   m_Name: Skill (2)
   m_TagString: Untagged
@@ -5291,18 +5376,6 @@ RectTransform:
   m_AnchoredPosition: {x: 236, y: -85.75}
   m_SizeDelta: {x: 108.17999, y: 117.62}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1015711936
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 114185600635813022, guid: 6d125fee521b5524d8f799b5295d3408,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1015711934}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1015711937
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5343,7 +5416,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1015711936}
+      - m_Target: {fileID: 1015711940}
         m_MethodName: GetSkill
         m_Mode: 1
         m_Arguments:
@@ -5391,6 +5464,26 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1015711934}
+--- !u!114 &1015711940
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1015711934}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73f0f7193133f8e4f899bbb18eae395a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skill: {fileID: 11400000, guid: a1cef687031099d4da84569277f6bf29, type: 2}
+  skillName: {fileID: 1676820648}
+  skillDescription: {fileID: 0}
+  skillIcon: {fileID: 1292639956}
+  skillLevel: {fileID: 890409785}
+  skillXPNeeded: {fileID: 21381629}
+  skillAttributes: {fileID: 1351123681}
+  skillAttrAmount: {fileID: 385976476}
+  m_PlayerHandler: {fileID: 0}
 --- !u!1 &1018478809
 GameObject:
   m_ObjectHideFlags: 0
@@ -5866,7 +5959,7 @@ GameObject:
   - component: {fileID: 1074406933}
   - component: {fileID: 1074406932}
   - component: {fileID: 1074406931}
-  - component: {fileID: 1074406930}
+  - component: {fileID: 1074406934}
   m_Layer: 5
   m_Name: Skill (1)
   m_TagString: Untagged
@@ -5899,18 +5992,6 @@ RectTransform:
   m_AnchoredPosition: {x: 67, y: -85.75}
   m_SizeDelta: {x: 108.17999, y: 117.62}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1074406930
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 114425856344455248, guid: 6d125fee521b5524d8f799b5295d3408,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1074406928}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1074406931
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5951,7 +6032,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1074406930}
+      - m_Target: {fileID: 1074406934}
         m_MethodName: GetSkill
         m_Mode: 1
         m_Arguments:
@@ -5999,6 +6080,26 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1074406928}
+--- !u!114 &1074406934
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1074406928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73f0f7193133f8e4f899bbb18eae395a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skill: {fileID: 11400000, guid: da560cbfde1d7cc4c993787eed5f15ff, type: 2}
+  skillName: {fileID: 537621508}
+  skillDescription: {fileID: 0}
+  skillIcon: {fileID: 1004201496}
+  skillLevel: {fileID: 1469265736}
+  skillXPNeeded: {fileID: 963736936}
+  skillAttributes: {fileID: 316928359}
+  skillAttrAmount: {fileID: 2051295725}
+  m_PlayerHandler: {fileID: 0}
 --- !u!1 &1093106504
 GameObject:
   m_ObjectHideFlags: 0
@@ -10710,7 +10811,7 @@ GameObject:
   - component: {fileID: 1969652159}
   - component: {fileID: 1969652158}
   - component: {fileID: 1969652157}
-  - component: {fileID: 1969652156}
+  - component: {fileID: 1969652160}
   m_Layer: 5
   m_Name: Skill (2)
   m_TagString: Untagged
@@ -10743,18 +10844,6 @@ RectTransform:
   m_AnchoredPosition: {x: 236, y: -85.75}
   m_SizeDelta: {x: 108.17999, y: 117.62}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1969652156
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 114044167858284016, guid: 6d125fee521b5524d8f799b5295d3408,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1969652154}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1969652157
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10795,7 +10884,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1969652156}
+      - m_Target: {fileID: 1969652160}
         m_MethodName: GetSkill
         m_Mode: 1
         m_Arguments:
@@ -10843,6 +10932,26 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1969652154}
+--- !u!114 &1969652160
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1969652154}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73f0f7193133f8e4f899bbb18eae395a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skill: {fileID: 11400000, guid: 95302da4d0db0764ca97164f177cad2f, type: 2}
+  skillName: {fileID: 1244120659}
+  skillDescription: {fileID: 0}
+  skillIcon: {fileID: 25674398}
+  skillLevel: {fileID: 1208342285}
+  skillXPNeeded: {fileID: 987903615}
+  skillAttributes: {fileID: 1641893315}
+  skillAttrAmount: {fileID: 363227243}
+  m_PlayerHandler: {fileID: 0}
 --- !u!1 &1980837451
 GameObject:
   m_ObjectHideFlags: 0
@@ -11063,7 +11172,7 @@ GameObject:
   - component: {fileID: 2022639510}
   - component: {fileID: 2022639509}
   - component: {fileID: 2022639508}
-  - component: {fileID: 2022639507}
+  - component: {fileID: 2022639511}
   m_Layer: 5
   m_Name: Skill (2)
   m_TagString: Untagged
@@ -11096,18 +11205,6 @@ RectTransform:
   m_AnchoredPosition: {x: 236, y: -85.75}
   m_SizeDelta: {x: 108.17999, y: 117.62}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2022639507
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 114202606272430022, guid: 6d125fee521b5524d8f799b5295d3408,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2022639505}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &2022639508
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11148,7 +11245,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2022639507}
+      - m_Target: {fileID: 2022639511}
         m_MethodName: GetSkill
         m_Mode: 1
         m_Arguments:
@@ -11196,6 +11293,26 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2022639505}
+--- !u!114 &2022639511
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2022639505}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73f0f7193133f8e4f899bbb18eae395a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skill: {fileID: 11400000, guid: 551248ec96a4a2548a773be409c59855, type: 2}
+  skillName: {fileID: 706115432}
+  skillDescription: {fileID: 0}
+  skillIcon: {fileID: 1631316366}
+  skillLevel: {fileID: 1719554276}
+  skillXPNeeded: {fileID: 965893046}
+  skillAttributes: {fileID: 24308541}
+  skillAttrAmount: {fileID: 130666412}
+  m_PlayerHandler: {fileID: 0}
 --- !u!1 &2051295723
 GameObject:
   m_ObjectHideFlags: 0

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: Power Lift
   m_EditorClassIdentifier: 
   Description: Increasae Strenght by 10
-  Icon: {fileID: 21300000, guid: 59a80e411730cdf419e6e1336ba49acd, type: 3}
+  Icon: {fileID: 21300000, guid: 6fe4c2a9ac2165b449752dd9bb5d7e25, type: 3}
   LevelNeeded: 2
   XPNeeded: 20
   AffectedAttributes:

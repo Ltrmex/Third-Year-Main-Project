@@ -27,49 +27,52 @@ namespace Ability {
         void Start()
         {
             m_PlayerHandler = this.GetComponentInParent<PlayerHandler>().Player;
-            //listener for the XP change
+            //Listener for the XP change
             m_PlayerHandler.onXPChange += ReactToChange;
-            //listener for the Level change
+            //Listener for the Level change
             m_PlayerHandler.onLevelChange += ReactToChange;
 
             if (skill)
+                //Calls SetValues from Skills class parsing true the game object and player handler
                 skill.SetValues(this.gameObject, m_PlayerHandler);
 
             EnableSkills();
-        }
+        }//End of Start method
 
+        //Checks if player already has a skill
         public void EnableSkills()
         {
-            //if the player has the skill already, then show it as enabled
+            //If the player has the skill already, then show it as enabled
             if (m_PlayerHandler && skill && skill.EnableSkill(m_PlayerHandler))
             {
                 TurnOnSkillIcon();
-            }
-            //if the player has the skill already, then show it as enabled
+            }//If
+            //If the player has the skill already, then show it as enabled
             else if (m_PlayerHandler && skill && skill.CheckSkills(m_PlayerHandler))
             {
+                // If the player doesn't have the skill , then show it as disable
                 this.GetComponent<Button>().interactable = true;
                 this.transform.Find("IconParent").Find("Disabled").gameObject.SetActive(false);
-            }
+            }//Else if
             else
             {
                 TurnOffSkillIcon();
-            }
-        }
+            }//Else
+        }//End of EnableSkills method
 
         private void OnEnable()
         {
             EnableSkills();
-        }
+        }//End of OnEnable
 
-        //Method to be used when you click the Skill icon
+        //Method to be used when user click the Skill icon
         public void GetSkill()
         {
             if (skill.GetSkill(m_PlayerHandler))
             {
                 TurnOnSkillIcon();
             }
-        }
+        }//End of GetSkill method
 
         //Turn on the Skill Icon - stop it from being clickable and disable the UI elements that make it change colour
         private void TurnOnSkillIcon()
@@ -77,7 +80,7 @@ namespace Ability {
             this.GetComponent<Button>().interactable = false;
             this.transform.Find("IconParent").Find("Available").gameObject.SetActive(false);
             this.transform.Find("IconParent").Find("Disabled").gameObject.SetActive(false);
-        }
+        }//End of TurnOnSkillIcon method
 
         //Turn off the Skill Icon so it cannot be used - stop it from being clickable and enable the UI elements that make it change colour
         private void TurnOffSkillIcon()
@@ -85,13 +88,12 @@ namespace Ability {
             this.GetComponent<Button>().interactable = false;
             this.transform.Find("IconParent").Find("Available").gameObject.SetActive(true);
             this.transform.Find("IconParent").Find("Disabled").gameObject.SetActive(true);
-        }
+        }//End of TurnOfSkillIcon method
 
         //event for when listener is woken
         void ReactToChange()
         {
             EnableSkills();
-        }
-
-    }
-}
+        }//End of ReactToChange method
+    }//End of class SkillDisplay
+}//End of namespace

@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Name: Agility
   m_EditorClassIdentifier: 
   Description: 
-  Thumbnail: {fileID: 0}
+  Thumbnail: {fileID: 21300000, guid: ab7c0e50365a64543a7694392968d3a0, type: 3}
