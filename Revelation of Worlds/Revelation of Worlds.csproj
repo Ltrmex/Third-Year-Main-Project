@@ -330,8 +330,12 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\Ability\Attributes.cs" />
+    <Compile Include="Assets\Scripts\Ability\PlayerHandler.cs" />
     <Compile Include="Assets\Scripts\Ability\PlayerStatus.cs" />
     <Compile Include="Assets\Scripts\Ability\PublicMethods.cs" />
+    <Compile Include="Assets\Scripts\Ability\SkillDisplay.cs" />
+    <Compile Include="Assets\Scripts\Ability\Skills.cs" />
     <Compile Include="Assets\Scripts\Behaviour\CameraSetup.cs" />
     <Compile Include="Assets\Scripts\Behaviour\GameOverManager.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemyAttack.cs" />
@@ -346,8 +350,6 @@
     <Compile Include="Assets\Scripts\Player\PlayerShooting.cs" />
     <Compile Include="Assets\Scripts\Puzzles\Rainbow.cs" />
     <Compile Include="Assets\Scripts\Score\ScoreManager.cs" />
-    <Compile Include="Assets\Scripts\so\Attributes.cs" />
-    <Compile Include="Assets\Scripts\so\Skills.cs" />
     <Compile Include="Assets\Simple Vector Icons\Sample\IconPreview.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
