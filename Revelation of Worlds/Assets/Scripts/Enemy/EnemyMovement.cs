@@ -32,8 +32,7 @@ public class EnemyMovement : MonoBehaviour {
 
         nav = GetComponent<NavMeshAgent>();
     }
-
-
+    
     void Update()
     {
         //Sets the destination of the nav mesh agent to the player

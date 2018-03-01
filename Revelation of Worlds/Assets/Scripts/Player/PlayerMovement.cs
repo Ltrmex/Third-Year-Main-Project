@@ -78,5 +78,10 @@ public class PlayerMovement : MonoBehaviour {
         }   // if
     } // Turning
 
+   /* public void AddingCoins()
+    {
+
+    }*/
+
 } // PlayerMovement
 

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.45059234, g: 0.50056744, b: 0.5750377, a: 1}
+  m_IndirectSpecularColor: {r: 0.45059234, g: 0.5005673, b: 0.5750377, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -759,6 +759,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   digit: 4
   buttons: []
+--- !u!4 &278936405 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4081433023080096, guid: 18d74ea4b36813a42b3a9688c5ec82c0,
+    type: 2}
+  m_PrefabInternal: {fileID: 704214930}
 --- !u!1 &356299914
 GameObject:
   m_ObjectHideFlags: 0
@@ -862,6 +867,35 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 462452509}
+--- !u!1 &470720455
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 470720456}
+  m_Layer: 0
+  m_Name: Pick Ups
+  m_TagString: Pick Up
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &470720456
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 470720455}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 348, y: 0.5, z: 300.95}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 278936405}
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &575981300
 GameObject:
   m_ObjectHideFlags: 0
@@ -1273,6 +1307,58 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 703480458}
+--- !u!1001 &704214930
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 470720456}
+    m_Modifications:
+    - target: {fileID: 4081433023080096, guid: 18d74ea4b36813a42b3a9688c5ec82c0, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -346.92
+      objectReference: {fileID: 0}
+    - target: {fileID: 4081433023080096, guid: 18d74ea4b36813a42b3a9688c5ec82c0, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -0.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 4081433023080096, guid: 18d74ea4b36813a42b3a9688c5ec82c0, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -294.27
+      objectReference: {fileID: 0}
+    - target: {fileID: 4081433023080096, guid: 18d74ea4b36813a42b3a9688c5ec82c0, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0.6532815
+      objectReference: {fileID: 0}
+    - target: {fileID: 4081433023080096, guid: 18d74ea4b36813a42b3a9688c5ec82c0, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0.27059808
+      objectReference: {fileID: 0}
+    - target: {fileID: 4081433023080096, guid: 18d74ea4b36813a42b3a9688c5ec82c0, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0.27059808
+      objectReference: {fileID: 0}
+    - target: {fileID: 4081433023080096, guid: 18d74ea4b36813a42b3a9688c5ec82c0, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0.6532815
+      objectReference: {fileID: 0}
+    - target: {fileID: 4081433023080096, guid: 18d74ea4b36813a42b3a9688c5ec82c0, type: 2}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 23430214631689294, guid: 18d74ea4b36813a42b3a9688c5ec82c0,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 136192533049363380, guid: 18d74ea4b36813a42b3a9688c5ec82c0,
+        type: 2}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 18d74ea4b36813a42b3a9688c5ec82c0, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &710732669
 GameObject:
   m_ObjectHideFlags: 0
@@ -3009,6 +3095,10 @@ Prefab:
         type: 2}
       propertyPath: m_Center.y
       value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1325854266341510, guid: a799d3193dcb0ad4bb7484570675fa96, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a799d3193dcb0ad4bb7484570675fa96, type: 2}

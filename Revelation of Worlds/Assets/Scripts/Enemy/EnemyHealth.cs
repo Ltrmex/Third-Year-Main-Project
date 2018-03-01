@@ -8,6 +8,7 @@ public class EnemyHealth : MonoBehaviour
     public int scoreValue = 10;                 // The amount added to the player's score when the enemy dies.
     public int experienceValue = 200;
     public AudioClip deathClip;                 // The sound to play when the enemy dies.
+    public GameObject coin;
 
     //Animator anim;                              // Reference to the animator.
     //AudioSource enemyAudio;                     // Reference to the audio source.
@@ -15,6 +16,7 @@ public class EnemyHealth : MonoBehaviour
     CapsuleCollider capsuleCollider;            // Reference to the capsule collider.
     bool isDead;                                // Whether the enemy is dead.
     bool isSinking;                             // Whether the enemy has started sinking through the floor.
+    
 
 
     void Awake()
@@ -36,6 +38,7 @@ public class EnemyHealth : MonoBehaviour
         {
             // ... move the enemy down by the sinkSpeed per second.
             transform.Translate(-Vector3.up * sinkSpeed * Time.deltaTime);
+            
         }
 
     }
@@ -84,7 +87,11 @@ public class EnemyHealth : MonoBehaviour
         // Change the audio clip of the audio source to the death clip and play it (this will stop the hurt clip playing).
         //enemyAudio.clip = deathClip;
         //enemyAudio.Play();
-    }
+
+
+        // Create an instance of the enemy prefab at the randomly selected spawn point's position and rotation.
+        Instantiate(coin, transform.position,  transform.rotation);
+}
 
 
     public void StartSinking()

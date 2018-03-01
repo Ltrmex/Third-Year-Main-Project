@@ -2474,6 +2474,7 @@ MonoBehaviour:
   scoreValue: 10
   experienceValue: 200
   deathClip: {fileID: 0}
+  coin: {fileID: 1443269767947756, guid: 18d74ea4b36813a42b3a9688c5ec82c0, type: 2}
 --- !u!114 &114294930475387794
 MonoBehaviour:
   m_ObjectHideFlags: 1
