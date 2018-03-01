@@ -41,8 +41,23 @@ public class MapGenerator : MonoBehaviour {
         for (int i = 0; i < 5; i++)
             SmoothMap();
 
+        //  Creating a border around the map
+        int borderSize = 1;
+        int[,] borderedMap = new int[width + borderSize * 2, height + borderSize * 2];  //  border of the map
+
+        //  Loop through all elements in the borderedMap
+        for (int x = 0; x < borderedMap.GetLength(0); x++) {
+            for (int y = 0; y < borderedMap.GetLength(1); y++) {
+                //  Check what's inside the map
+                if (x >= borderSize && x < width + borderSize && y >= borderSize && y < height + borderSize)
+                    borderedMap[x, y] = map[x - borderSize, y - borderSize];    //  set bordered map
+                else
+                    borderedMap[x, y] = 1;  //  if inside bordered area
+            }   //  inner for
+        }   //  for
+
         MeshGenerator meshGen = GetComponent<MeshGenerator>();
-        meshGen.GenerateMesh(map, 1);
+        meshGen.GenerateMesh(borderedMap, 1);
     }   //  GenerateMap()
 
     //  Fills the map
