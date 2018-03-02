@@ -3,13 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Coins : MonoBehaviour {
-    private Color color;
+    private void Start()
+    {
+        gameObject.GetComponent<Renderer>().material.color = Color.yellow;
+    }
 
     void OnCollisionEnter(Collision coin)
     {
         if (coin.gameObject.CompareTag("Player"))
         {
-            // color = ()
             gameObject.SetActive(false);
             Debug.Log("Coin Picked");
         }
