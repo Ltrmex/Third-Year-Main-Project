@@ -322,6 +322,7 @@
     <Compile Include="Assets\Scripts\Character Stats\CreatePlayer.cs" />
     <Compile Include="Assets\Scripts\Character Stats\GameInfo.cs" />
     <Compile Include="Assets\Scripts\Character Stats\MageClass.cs" />
+    <Compile Include="Assets\Scripts\Character Stats\PanelHandler.cs" />
     <Compile Include="Assets\Scripts\Character Stats\PlayerClass.cs" />
     <Compile Include="Assets\Scripts\Character Stats\WarriorClass.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemyAttack.cs" />
