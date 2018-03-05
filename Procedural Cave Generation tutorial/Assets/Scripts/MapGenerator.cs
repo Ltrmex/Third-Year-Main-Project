@@ -187,7 +187,78 @@ public class MapGenerator : MonoBehaviour {
     void CreatePassage(Room roomA, Room roomB, Coord tileA, Coord tileB) {
         Room.ConnectRooms(roomA, roomB);    //  mark as connected
         Debug.DrawLine(CoordToWorldPoint(tileA), CoordToWorldPoint(tileB), Color.green, 100);   //  draw debug line
+
+        List<Coord> line = GetLine(tileA, tileB);   //  list of coordinates for the line
+        foreach (Coord c in line)   //  loop through coordinates
+            DrawCircle(c, 5);   //  draw circle points
+
     }   //  CreatePassage()
+
+    //  Specify radius to draw each point in the passage
+    void DrawCircle(Coord c, int r) {
+        for (int x = -r; x <= r; x++) { //  loop
+            for (int y = -r; y <= r; y++) {
+                if (x * x + y * y <= r * r) {
+                    int drawX = c.tileX + x;    //  actual point that is going be drawn
+                    int drawY = c.tileY + y;
+
+                    //  Check if inside the map
+                    if (IsInMapRange(drawX, drawY))
+                        map[drawX, drawY] = 0;
+                }   //  if
+            }   //  for
+        }   // for 
+    }   //  DrawCircle()
+
+    //  Get line method
+    List<Coord> GetLine(Coord from, Coord to) {
+        List<Coord> line = new List<Coord>();   //  store lining
+
+        int x = from.tileX; //  starting tile x
+        int y = from.tileY; //  starting tile y
+
+        int dx = to.tileX - from.tileX; //  delta x
+        int dy = to.tileY - from.tileY; //  delta y
+
+        bool inverted = false;
+        int step = Math.Sign(dx);   //  positive or negative depending on sign of dx
+        int gradientStep = Math.Sign(dy);   // depending on sign of dy
+
+        int longest = Mathf.Abs(dx);    //  longest
+        int shortest = Mathf.Abs(dy);   //  shortest
+
+        if (longest < shortest) {
+            inverted = true;    //  inverted 
+
+            //  Invert values
+            longest = Mathf.Abs(dy);
+            shortest = Mathf.Abs(dx);
+
+            step = Math.Sign(dy);
+            gradientStep = Math.Sign(dx);
+        }   //  if
+
+        int gradientAccumulation = longest / 2;
+        for (int i = 0; i < longest; i++) {
+            line.Add(new Coord(x, y));  //  add to the line current point
+
+            if (inverted)   //  if inverted
+                y += step;  //  increment y by step
+            else
+                x += step;  //  else x incremented by step
+
+            gradientAccumulation += shortest;
+            if (gradientAccumulation >= longest) {  //  if greater or equal to
+                if (inverted)   //  if inverted
+                    x += gradientStep;  //  x increments by gradientStep
+                else
+                    y += gradientStep;  // else y increments by gradientStep
+                gradientAccumulation -= longest;
+            }   //  if
+        }   //  for
+
+        return line;    //  return line
+    }   //  GetLine()
 
     //  Returns world position
     Vector3 CoordToWorldPoint(Coord tile) {
