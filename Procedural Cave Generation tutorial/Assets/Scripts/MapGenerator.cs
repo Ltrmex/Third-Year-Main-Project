@@ -94,12 +94,32 @@ public class MapGenerator : MonoBehaviour {
             }   //  else
         }   //  foreach
 
+        survivingRooms.Sort();  //  sort from largest to smallest
+        survivingRooms[0].isMainRoom = true;    //  set largest as main room
+        survivingRooms[0].isAccessibleFromMainRoom = true;
+
         ConnectClosestRooms(survivingRooms);
     }   //  ProcessMap()
 
     //  Find and connect closest rooms
-    void ConnectClosestRooms(List<Room> allRooms) {
-        //  Variables
+    void ConnectClosestRooms(List<Room> allRooms, bool forceAccessibilityFromMainRoom = false) {
+        //  Lists of rooms
+        List<Room> roomListA = new List<Room>();
+        List<Room> roomListB = new List<Room>();
+
+        if (forceAccessibilityFromMainRoom) {   //  if forced
+            foreach (Room room in allRooms) {   //  loop through rooms
+                if (room.isAccessibleFromMainRoom)  //  if room accessible
+                    roomListB.Add(room);    //  add to list b
+                else
+                    roomListA.Add(room);    //  otherwise add to list a
+            }   //  foreach
+        }   //  if
+        else {  //  if not forcing
+            roomListA = allRooms;   //  leave it as it is
+            roomListB = allRooms;
+        }   //  else
+
         int bestDistance = 0;   //  best distance between the rooms
 
         //  Which tiles resulted in best distance
@@ -114,17 +134,17 @@ public class MapGenerator : MonoBehaviour {
         bool possibleConnectionFound = false;
 
         //  Go through all of the rooms
-        foreach (Room roomA in allRooms) {
-            possibleConnectionFound = false;    //  reset the value of possible connection
+        foreach (Room roomA in roomListA) {
+            if (!forceAccessibilityFromMainRoom) {  //  if not force
+                possibleConnectionFound = false;    //  reset the value of possible connection
+                if (roomA.connectedRooms.Count > 0) //  if has connection
+                    continue;   //  continue
+            }   //  if  
 
-            foreach (Room roomB in allRooms) {
-                if (roomA == roomB)
+            foreach (Room roomB in roomListB) {
+                if (roomA == roomB || roomA.IsConnected(roomB))
                     continue;   //  skip to the next b
-                if (roomA.IsConnected(roomB)) {
-                    possibleConnectionFound = false;
-                    break;  //  go to the next room a
-                }   //  if
-
+ 
                 //  Checking the distance between the rooms
                 for (int tileIndexA = 0; tileIndexA < roomA.edgeTiles.Count; tileIndexA++) {
                     for (int tileIndexB = 0; tileIndexB < roomB.edgeTiles.Count; tileIndexB++) {
@@ -149,9 +169,18 @@ public class MapGenerator : MonoBehaviour {
                 }   //  for
             }   //  foreach
 
-            if (possibleConnectionFound)    //  if found possible connection
-                CreatePassage(bestRoomA, bestRoomB, bestTileA, bestTileB);  //  create passage
+            if (possibleConnectionFound && !forceAccessibilityFromMainRoom)
+                CreatePassage(bestRoomA, bestRoomB, bestTileA, bestTileB);   //  create passage
         }   //  foreach
+
+        if (possibleConnectionFound && forceAccessibilityFromMainRoom) {
+            CreatePassage(bestRoomA, bestRoomB, bestTileA, bestTileB);  //  create passage
+            ConnectClosestRooms(allRooms, true);    //  look for more connections to be made
+        }   //  if
+
+        if (!forceAccessibilityFromMainRoom) {  //  if not force
+            ConnectClosestRooms(allRooms, true);    //  force accessibility
+        }   //  if
     }   //  ConnectClosestRooms()
 
     //  Create passage between rooms
@@ -301,12 +330,14 @@ public class MapGenerator : MonoBehaviour {
     }   //  Coord
 
     //  Room class
-    class Room {
+    class Room : IComparable<Room> {
         //  Variables
         public List<Coord> tiles;   //  storing all tiles in the room
         public List<Coord> edgeTiles;   //  edge of the room, so instead searching all tiles only edges of the rooms will be searched
         public List<Room> connectedRooms;   //  connected rooms  
         public int roomSize;    //  room size
+        public bool isAccessibleFromMainRoom;   //  accessible
+        public bool isMainRoom; //  is it main room
 
         //  Empty constructor
         public Room() {}
@@ -332,16 +363,35 @@ public class MapGenerator : MonoBehaviour {
             }   //  foreach
         }   //  Room
 
-        //  Adding to connected rooms list
+        //  Set which rooms are accessible from main room
+        public void SetAccessibleFromMainRoom() {
+            if (!isAccessibleFromMainRoom) {    //  if not accessible
+                isAccessibleFromMainRoom = true;    //  set accessibility
+                foreach (Room connectedRoom in connectedRooms) {    //  go through each of the rooms
+                    connectedRoom.SetAccessibleFromMainRoom();  //  set to be accessible from main room
+                }   //  foreach
+            }   //  if
+        }   //  SetAccessibleFromMainRoom()
+
+        //  Adding to connected rooms list && making sure all rooms are connected together
         public static void ConnectRooms(Room roomA, Room roomB) {
+            if (roomA.isAccessibleFromMainRoom) //  if room a accessible from main
+                roomB.SetAccessibleFromMainRoom();  //  set b to be accessible
+            else if (roomB.isAccessibleFromMainRoom)
+                roomA.SetAccessibleFromMainRoom();
+
             roomA.connectedRooms.Add(roomB);
             roomB.connectedRooms.Add(roomA);
         }   //  ConnectRooms()
+
+        public int CompareTo(Room otherRoom) {
+            return otherRoom.roomSize.CompareTo(roomSize);
+        }   //  CompareTo()
 
         //  Check if connected
         public bool IsConnected(Room otherRoom) {
             return connectedRooms.Contains(otherRoom);  //  if connected connectedRooms contains the otherRoom
         }   //  IsConnected()
-    }
+    }   //  Room
 
 }   //  MapGenerator
