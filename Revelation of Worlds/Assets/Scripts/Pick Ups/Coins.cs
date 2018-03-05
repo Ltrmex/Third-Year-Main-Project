@@ -8,7 +8,7 @@ public class Coins : MonoBehaviour {
         gameObject.GetComponent<Renderer>().material.color = Color.yellow;
     }
 
-    void OnCollisionEnter(Collision coin)
+    void OnTriggerEnter(Collider coin)
     {
         if (coin.gameObject.CompareTag("Player"))
         {
