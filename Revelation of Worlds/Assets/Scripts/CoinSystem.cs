@@ -26,7 +26,7 @@ public class CoinSystem : MonoBehaviour {
         {
             PlayerPrefs.SetInt("AmountCoins", totalCoins);
         }
-
+        
         coinDisplay.text = "Coins: " + totalCoins;
         coinSlider.value = totalCoins;
     }
