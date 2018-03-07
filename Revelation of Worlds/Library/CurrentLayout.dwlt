@@ -110,7 +110,7 @@ MonoBehaviour:
   m_MinSize: {x: 713, y: 492}
   m_MaxSize: {x: 18008, y: 14042}
   vertical: 0
-  controlID: 238
+  controlID: 843
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -138,7 +138,7 @@ MonoBehaviour:
   - {fileID: 13}
   - {fileID: 14}
   m_Selected: 0
-  m_LastSelected: 3
+  m_LastSelected: 1
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -162,7 +162,7 @@ MonoBehaviour:
   m_MinSize: {x: 234, y: 492}
   m_MaxSize: {x: 10004, y: 14042}
   vertical: 1
-  controlID: 172
+  controlID: 844
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -558,7 +558,7 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 
+    m_SelectedIDs: 98080000
     m_LastClickedID: 0
     m_ExpandedIDs: 9efbffff00000000
     m_RenameOverlay:
@@ -622,20 +622,20 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets
+    - Assets/Scripts
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets
+  - Assets/Scripts
   m_LastFoldersGridSize: 16
-  m_LastProjectPath: D:\College\Year_3\Sem_2\IT_Professional\Third-Year-Main-Project\Revelation
+  m_LastProjectPath: C:\Users\Cristina\Desktop\CoinAdditionDone\Third-Year-Main-Project\Revelation
     of Worlds
   m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 79}
-    m_SelectedIDs: 5a290000
-    m_LastClickedID: 10586
-    m_ExpandedIDs: 000000005a290000f4290000062a0000e62b0000002d00000e2d0000a82e00002e2f0000e22f0000343100002632000046320000da3d0000dc3d0000de3d0000e03d0000e23d0000e43d0000e63d0000e83d0000ea3d0000ec3d0000ee3d000000ca9a3bffffff7f
+    scrollPos: {x: 0, y: 250}
+    m_SelectedIDs: 062a0000
+    m_LastClickedID: 10758
+    m_ExpandedIDs: 000000005a290000f4290000062a0000e62b0000002d00000e2d0000a82e00002e2f0000e22f0000343100002632000046320000de3d0000e03d0000e23d0000e43d0000e63d0000e83d0000ea3d0000ec3d0000ee3d0000f03d0000f23d000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -663,7 +663,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000005a290000f4290000062a0000e62b0000002d00000e2d0000a82e00002e2f0000e22f0000343100002632000046320000da3d0000dc3d0000de3d0000e03d0000e23d0000e43d0000e63d0000e83d0000ea3d0000ec3d0000ee3d000000ca9a3bffffff7f
+    m_ExpandedIDs: 000000005a290000f4290000062a0000e62b0000002d00000e2d0000a82e00002e2f0000e22f0000343100002632000046320000de3d0000e03d0000e23d0000e43d0000e63d0000e83d0000ea3d0000ec3d0000ee3d0000f03d0000f23d000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -690,7 +690,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: 9e2e00002e310000000000004c310000b42e0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
