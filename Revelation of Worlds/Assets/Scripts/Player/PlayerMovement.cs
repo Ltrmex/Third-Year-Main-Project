@@ -1,87 +1,86 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 
-/* 
-Author: Maciej Majchrzak
-Student Number: G00332746
-Date: 06-02-2018
-Tutorial Reference: https://unity3d.com/learn/tutorials/s/survival-shooter-tutorial
-NOTE: Code was developed with the aid of the tutorial mentioned above     
-*/
+public class PlayerMovement : MonoBehaviour
+{
+    public float speed = 6f;            // The speed that the player will move at.
 
-public class PlayerMovement : MonoBehaviour {
-    // Public Variables
-    public float movementSpeed = 5f;    // movement speed for the player
+    Vector3 movement;                   // The vector to store the direction of the player's movement.
+    Animator anim;                      // Reference to the animator component.
+    Rigidbody playerRigidbody;          // Reference to the player's rigidbody.
+    int floorMask;                      // A layer mask so that a ray can be cast just at gameobjects on the floor layer.
+    float camRayLength = 100f;          // The length of the ray from the camera into the scene.
 
-    // Private Variables
-    Vector3 movement;   // direction of the player's movement
-    Rigidbody playerRigidbody;  // player's rigidbody.
-    Animator myAnimator;
-    int floorMask;  // casting of ray at game objects
-    float camRayLength = 100f;  // length of the ray from the camera into the scene
-
-    // Called automatically
-    public void Awake() {
-        // Create a layer mask for the floor layer
+    void Awake()
+    {
+        // Create a layer mask for the floor layer.
         floorMask = LayerMask.GetMask("Floor");
 
-        // Set up references
-        myAnimator = GetComponent<Animator>();
+        // Set up references.
+        anim = GetComponent<Animator>();
         playerRigidbody = GetComponent<Rigidbody>();
-    }   // Awake
+    }
 
-    // Updates player's position
-    public void Update() {
-        // Store the input axes
+
+    void FixedUpdate()
+    {
+        // Store the input axes.
         float h = Input.GetAxisRaw("Horizontal");
         float v = Input.GetAxisRaw("Vertical");
 
-        Boolean animate = false;
+        // Move the player around the scene.
+        Move(h, v);
 
-        Move(h, v); // player's movement
-        Turning();  // player facing mouse cursor
+        // Turn the player to face the mouse cursor.
+        Turning();
 
-        // Trying to get the player to jump
-        if (Input.GetKeyDown(KeyCode.Space))
-            animate = true;
+        // Animate the player.
+        Animating(h, v);
+    }
 
-        myAnimator.SetBool("Jump", animate);
-
-    } // FixedUpdate
-
-    // Movement of the player
-    public void Move(float h, float v) {
-        movement.Set(h, 0f, v); // movement vector based on the axis input
-        movement = movement.normalized * movementSpeed * Time.deltaTime;    // make sure movement speed is proportional
-
-        // Move the player
-        playerRigidbody.MovePosition(transform.position + movement);
-
-    } // Move
-
-    // Turning of the character towards the direction of the mouse
-    public void Turning() {
-        Ray camRay = Camera.main.ScreenPointToRay(Input.mousePosition); // ray from mouse location in the direction of the camera
-        RaycastHit floorHit;    // what's hit by the ray
-
-        // Check if raycast is going to hit the floor
-        if (Physics.Raycast(camRay, out floorHit, camRayLength, floorMask)) {
-            // Create a vector from the player to the point on the floor the raycast from the mouse hit
-            Vector3 playerToMouse = floorHit.point - transform.position;
-            
-            playerToMouse.y = 0f;   // ensure the vector is entirely along the floor plane
-            
-            Quaternion newRotation = Quaternion.LookRotation(playerToMouse);    // create a rotation based on the mouse
-
-            // Player's new rotation
-            playerRigidbody.MoveRotation(newRotation);
-        }   // if
-    } // Turning
-
-   /* public void AddingCoins()
+    void Move(float h, float v)
     {
+        // Set the movement vector based on the axis input.
+        movement.Set(h, 0f, v);
 
-    }*/
+        // Normalise the movement vector and make it proportional to the speed per second.
+        movement = movement.normalized * speed * Time.deltaTime;
 
-} // PlayerMovement
+        // Move the player to it's current position plus the movement.
+        playerRigidbody.MovePosition(transform.position + movement);
+    }
+
+    void Turning()
+    {
+        // Create a ray from the mouse cursor on screen in the direction of the camera.
+        Ray camRay = Camera.main.ScreenPointToRay(Input.mousePosition);
+
+        // Create a RaycastHit variable to store information about what was hit by the ray.
+        RaycastHit floorHit;
+
+        // Perform the raycast and if it hits something on the floor layer...
+        if (Physics.Raycast(camRay, out floorHit, camRayLength, floorMask))
+        {
+            // Create a vector from the player to the point on the floor the raycast from the mouse hit.
+            Vector3 playerToMouse = floorHit.point - transform.position;
+
+            // Ensure the vector is entirely along the floor plane.
+            playerToMouse.y = 0f;
+
+            // Create a quaternion (rotation) based on looking down the vector from the player to the mouse.
+            Quaternion newRotation = Quaternion.LookRotation(playerToMouse);
+
+            // Set the player's rotation to this new rotation.
+            playerRigidbody.MoveRotation(newRotation);
+        }
+    }
+
+    void Animating(float h, float v)
+    {
+        // Create a boolean that is true if either of the input axes is non-zero.
+        bool walking = h != 0f || v != 0f;
+
+        // Tell the animator whether or not the player is walking.
+        anim.SetBool("IsWalking", walking);
+    }
+}
 
