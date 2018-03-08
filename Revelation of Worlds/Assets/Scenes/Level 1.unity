@@ -2671,6 +2671,7 @@ GameObject:
   - component: {fileID: 770371201}
   - component: {fileID: 770371200}
   - component: {fileID: 770371204}
+  - component: {fileID: 770371205}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -2761,12 +2762,23 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 770371199}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b443a30ee9f0b044ca88c71ef96c9413, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pauseButton: {fileID: 782775357}
+  pausePanel: {fileID: 505557051}
+--- !u!114 &770371205
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 770371199}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97faede7338983548b370e17d962ff3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   pausePanel: {fileID: 505557051}
 --- !u!1 &777485631
 GameObject:
@@ -2941,7 +2953,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &782775358
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5790,8 +5802,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 770371204}
-        m_MethodName: OnUnPause
+      - m_Target: {fileID: 770371205}
+        m_MethodName: UnPause
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6911,11 +6923,11 @@ MonoBehaviour:
     lineCount: 1
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 0
+  m_havePropertiesChanged: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 0
+  m_isInputParsingRequired: 1
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:
