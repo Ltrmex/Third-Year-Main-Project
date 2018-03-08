@@ -16,9 +16,12 @@ public class Pause : MonoBehaviour {
 
     public void OnPause()
     {
-        pausePanel.SetActive(true);
-        pauseButton.SetActive(false);
-        Time.timeScale = 0;
+       
+        
+            pausePanel.SetActive(true);
+            pauseButton.SetActive(false);
+            Time.timeScale = 0;
+        
     }
 
     public void OnUnPause()
