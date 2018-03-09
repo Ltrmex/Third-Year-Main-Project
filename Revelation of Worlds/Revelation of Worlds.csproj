@@ -330,6 +330,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Menu.cs" />
     <Compile Include="Assets\Scripts\Ability\Attributes.cs" />
     <Compile Include="Assets\Scripts\Ability\PlayerHandler.cs" />
     <Compile Include="Assets\Scripts\Ability\PlayerStatus.cs" />
