@@ -394,6 +394,7 @@ d2a2bd333db22f480a8589e167314ecc Vuforia.UnityExtensions.dll:Vuforia.UserDefined
 3d1b89310e77c34bc0c8d7132231345c Vuforia.UnityExtensions.dll:Vuforia.WireframeBehaviour
 05524b8f659e7bfe5756d1335fec24ba Vuforia.UnityExtensions.dll:Vuforia.WireframeTrackableEventHandler
 15bea26698002c6c4a3087131232ce5c Vuforia.UnityExtensions.dll:Vuforia.WordBehaviour
+0e711a2deef5f8a05c2ae8d53e5caf23 Assembly-CSharp.dll:.Menu
 24bb26e7da03092690ef38ebcd7ec1c0 Assembly-CSharp.dll:.MiniMapScript
 26215f135eeb48d8fa1189498c107f6c Vuforia.UnityExtensions.dll:Vuforia.AnchorBehaviour
 0561521e336e270e6e5a9c61387cb838 Vuforia.UnityExtensions.dll:Vuforia.AnchorInputListenerBehaviour
@@ -434,4 +435,4 @@ d2a2bd333db22f480a8589e167314ecc Vuforia.UnityExtensions.dll:Vuforia.UserDefined
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:TMPro.Examples.SimpleScript
 0f3d4bb7128a287827d041c696039525 Assembly-CSharp-firstpass.dll:UnityStandardAssets.Utility.AutoMobileShaderSwitch
 151b419b9eb36b0645b847c3beddff35 Assembly-CSharp.dll:Ability.Attributes
-7b186cbcecc1c665bc23eec6a29a6972 Assembly-CSharp.dll:.Menu
+e2cfd966cb1bcedac539edbb3b49f454 Assembly-CSharp.dll:.ChangeMusicVolume

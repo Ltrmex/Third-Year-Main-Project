@@ -10,7 +10,6 @@ public class Menu : MonoBehaviour
     public GameObject mainMenuHolder;
     public GameObject optionsMenuHolder;
 
-    public Slider[] volumeSlides;
     public Toggle[] resolutionToggles;
     public Toggle fullscreenToggle;
     public int[] screenWidths;
@@ -58,19 +57,7 @@ public class Menu : MonoBehaviour
         mainMenuHolder.SetActive(true);
         optionsMenuHolder.SetActive(false);
     }
-    public void SetMasterVolume(float value)
-
-    { 
-       
-    }
-    public void SetMusicVolume(float value)
-    {
-   
-}
-    public void SetSoundVolume(float value)
-    {
     
-}
     public void SetScreenResolution(int i)
     {
         if (resolutionToggles[i].isOn)
