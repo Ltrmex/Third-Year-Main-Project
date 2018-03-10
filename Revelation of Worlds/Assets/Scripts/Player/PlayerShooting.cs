@@ -10,14 +10,11 @@ public class PlayerShooting : MonoBehaviour
     Ray shootRay;                                   // A ray from the gun end forwards.
     RaycastHit shootHit;                            // A raycast hit to get information about what was hit.
     int shootableMask;                              // A layer mask so the raycast only hits things on the shootable layer.
-    //ParticleSystem gunParticles;                    // Reference to the particle system.
+    ParticleSystem gunParticles;                    // Reference to the particle system.
     LineRenderer gunLine;                           // Reference to the line renderer.
-    //AudioSource gunAudio;                           // Reference to the audio source.
+    AudioSource gunAudio;                           // Reference to the audio source.
     Light gunLight;                                 // Reference to the light component.
     float effectsDisplayTime = 0.2f;                // The proportion of the timeBetweenBullets that the effects will display for.
-
-    public Color startColor = Color.blue;
-    public Color endColor = Color.red;
 
     void Awake()
     {
@@ -25,9 +22,9 @@ public class PlayerShooting : MonoBehaviour
         shootableMask = LayerMask.GetMask("Shootable");
 
         // Set up the references.
-        //gunParticles = GetComponent<ParticleSystem>();
+        gunParticles = GetComponent<ParticleSystem>();
         gunLine = GetComponent<LineRenderer>();
-        //gunAudio = GetComponent<AudioSource>();
+        gunAudio = GetComponent<AudioSource>();
         gunLight = GetComponent<Light>();
     }
 
@@ -64,22 +61,18 @@ public class PlayerShooting : MonoBehaviour
         timer = 0f;
 
         // Play the gun shot audioclip.
-        //gunAudio.Play();
+        gunAudio.Play();
 
         // Enable the light.
         gunLight.enabled = true;
 
         // Stop the particles from playing if they were, then start the particles.
-        //gunParticles.Stop();
-        //gunParticles.Play();
+        gunParticles.Stop();
+        gunParticles.Play();
 
         // Enable the line renderer and set it's first position to be the end of the gun.
         gunLine.enabled = true;
         gunLine.SetPosition(0, transform.position);
-
-        gunLine.material = new Material(Shader.Find("Particles/Additive"));
-        gunLine.startColor = startColor;
-        gunLine.endColor = endColor;
 
         // Set the shootRay so that it starts at the end of the gun and points forward from the barrel.
         shootRay.origin = transform.position;
@@ -109,3 +102,4 @@ public class PlayerShooting : MonoBehaviour
         }
     }
 }
+

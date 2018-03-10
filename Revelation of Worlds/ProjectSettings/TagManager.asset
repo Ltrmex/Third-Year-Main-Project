@@ -6,6 +6,7 @@ TagManager:
   tags:
   - RainbowPuzzle
   - Pick Up
+  - Coins
   layers:
   - Default
   - TransparentFX

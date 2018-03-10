@@ -27,12 +27,13 @@ public class CoinSystem : MonoBehaviour {
             PlayerPrefs.SetInt("AmountCoins", totalCoins);
         }
         
-        coinDisplay.text = "Coins: " + totalCoins;
-        coinSlider.value = totalCoins;
+
     }
 
     private void Update()
     {
+        coinDisplay.text = "Coins: " + totalCoins;
+        coinSlider.value = totalCoins;
         if (Input.GetKeyDown("m"))
         {
             totalCoins = 0;
