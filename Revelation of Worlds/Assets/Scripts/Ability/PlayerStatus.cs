@@ -8,6 +8,8 @@ namespace Ability
 {
     public class PlayerStatus : MonoBehaviour
     {
+        private LevelSystem lvl;
+        GameObject experienceObject;
 
         [Header("Main Player Stats")]
         public string PlayerName;
@@ -15,6 +17,14 @@ namespace Ability
 
         [SerializeField]
         private int m_PlayerXP = 0;
+
+
+        private void Start()
+        {
+            experienceObject = GameObject.FindGameObjectWithTag("EXP");
+            lvl = experienceObject.GetComponent<LevelSystem>();
+        }
+
         public int PlayerXP
         {
             get { return m_PlayerXP; }
@@ -31,6 +41,7 @@ namespace Ability
         /* Set Listener for Player Level */
         [SerializeField]
         private int m_PlayerLevel = 1;
+
         public int PlayerLevel
         {
             get { return m_PlayerLevel; }
@@ -43,6 +54,13 @@ namespace Ability
                     onLevelChange();
             }
         }//End of PlayerLevel
+
+        private void Update()
+        {
+            m_PlayerXP = LevelSystem.experiencePoints;
+            m_PlayerLevel = lvl.currentLevel;
+        }
+
 
 
         [Header("Player Attributes")]

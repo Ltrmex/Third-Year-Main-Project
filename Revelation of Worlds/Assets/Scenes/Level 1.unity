@@ -1253,7 +1253,7 @@ GameObject:
   - component: {fileID: 205892780}
   m_Layer: 5
   m_Name: Level
-  m_TagString: Untagged
+  m_TagString: EXP
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1288,6 +1288,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10c136106bc00c4418d4fb9bf5911959, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentLevel: 0
   displayLevel: {fileID: 205892782}
   experienceDisplay: {fileID: 2078489468}
   experienceSlider: {fileID: 682351379}
@@ -2690,8 +2691,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlayerName: Lukas
   PlayerHP: 50
-  m_PlayerXP: 100
-  m_PlayerLevel: 3
+  m_PlayerXP: 600
+  m_PlayerLevel: 1
   Attributes:
   - attribute: {fileID: 11400000, guid: ab975fe2652e1cb41827a2dd3ebeef84, type: 2}
     amount: 10

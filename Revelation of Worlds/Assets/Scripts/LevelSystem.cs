@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class LevelSystem : MonoBehaviour {
 
     public static int experiencePoints;
-    private int currentLevel;
+    public int currentLevel;
     public Text displayLevel;
     public Text experienceDisplay;
     public Slider experienceSlider;

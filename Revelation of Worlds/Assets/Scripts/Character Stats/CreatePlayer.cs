@@ -7,6 +7,7 @@ public class CreatePlayer : MonoBehaviour {
 
     private PlayerClass newPlayer;
     private string playerName = "Player 1";
+    private CoinSystem coinsToSpend;
 
     //  UI
     public Text strengthText;
@@ -16,7 +17,6 @@ public class CreatePlayer : MonoBehaviour {
     public Text hitPointsText;
     public Text regenerationText;
     public Text pointsText;
-    private CoinSystem coinsToSpend;
     GameObject coins;
 
     // Use this for initialization
@@ -24,7 +24,6 @@ public class CreatePlayer : MonoBehaviour {
         coins = GameObject.FindGameObjectWithTag("Coins");
         coinsToSpend = coins.GetComponent<CoinSystem>();
         newPlayer = new PlayerClass();
-        UpdateUI();
 	}
 
     public void CreateNewPlayer() {
@@ -46,22 +45,16 @@ public class CreatePlayer : MonoBehaviour {
     public void SetArcherClass() {
         newPlayer.PlayerC = new ArcherClass();
         SetPoints();
-        //  Update UI
-        UpdateUI();
     }
 
     public void SetWarriorClass() {
         newPlayer.PlayerC = new WarriorClass();
         SetPoints();
-        //  Update UI
-        UpdateUI();
     }
 
     public void SetMageClass() {
         newPlayer.PlayerC = new MageClass();
         SetPoints();
-        //  Update UI
-        UpdateUI();
     }
 
     private void SetPoints() {
@@ -73,7 +66,7 @@ public class CreatePlayer : MonoBehaviour {
         newPlayer.Regeneration = newPlayer.PlayerC.Regeneration;
     }
 
-    void UpdateUI() {
+    void Update() {
         strengthText.text = newPlayer.Strength.ToString();
         wisdomText.text = newPlayer.Wisdom.ToString();
         agilityText.text = newPlayer.Agility.ToString();
@@ -89,12 +82,10 @@ public class CreatePlayer : MonoBehaviour {
             if (amount > 0 && coinsToSpend.totalCoins > 0) {
                 newPlayer.Strength += amount;
                 --coinsToSpend.totalCoins;
-                UpdateUI();
             }
             else if (amount < 0 && newPlayer.Strength > newPlayer.PlayerC.Strength) {
                 newPlayer.Strength += amount;
                 ++coinsToSpend.totalCoins;
-                UpdateUI();
             }
             else {
                 Debug.Log("No Class Chosen!!!");
@@ -110,13 +101,11 @@ public class CreatePlayer : MonoBehaviour {
             {
                 newPlayer.Wisdom += amount;
                 --coinsToSpend.totalCoins;
-                UpdateUI();
             }
             else if (amount < 0 && newPlayer.Wisdom > newPlayer.PlayerC.Wisdom)
             {
                 newPlayer.Wisdom += amount;
                 ++coinsToSpend.totalCoins;
-                UpdateUI();
             }
             else
             {
@@ -133,13 +122,11 @@ public class CreatePlayer : MonoBehaviour {
             {
                 newPlayer.Agility += amount;
                 --coinsToSpend.totalCoins;
-                UpdateUI();
             }
             else if (amount < 0 && newPlayer.Agility > newPlayer.PlayerC.Agility)
             {
                 newPlayer.Agility += amount;
                 ++coinsToSpend.totalCoins;
-                UpdateUI();
             }
             else
             {
@@ -156,13 +143,11 @@ public class CreatePlayer : MonoBehaviour {
             {
                 newPlayer.Armor += amount;
                 --coinsToSpend.totalCoins;
-                UpdateUI();
             }
             else if (amount < 0 && newPlayer.Armor > newPlayer.PlayerC.Armor)
             {
                 newPlayer.Armor += amount;
                 ++coinsToSpend.totalCoins;
-                UpdateUI();
             }
             else
             {
@@ -179,13 +164,11 @@ public class CreatePlayer : MonoBehaviour {
             {
                 newPlayer.HitPoints += amount;
                 --coinsToSpend.totalCoins;
-                UpdateUI();
             }
             else if (amount < 0 && newPlayer.HitPoints > newPlayer.PlayerC.HitPoints)
             {
                 newPlayer.HitPoints += amount;
                 ++coinsToSpend.totalCoins;
-                UpdateUI();
             }
             else
             {
@@ -202,13 +185,11 @@ public class CreatePlayer : MonoBehaviour {
             {
                 newPlayer.Regeneration += amount;
                 --coinsToSpend.totalCoins;
-                UpdateUI();
             }
             else if (amount < 0 && newPlayer.Regeneration > newPlayer.PlayerC.Regeneration)
             {
                 newPlayer.Regeneration += amount;
                 ++coinsToSpend.totalCoins;
-                UpdateUI();
             }
             else
             {

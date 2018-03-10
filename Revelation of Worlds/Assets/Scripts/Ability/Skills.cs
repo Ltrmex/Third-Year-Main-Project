@@ -100,7 +100,8 @@ namespace Ability
                 if (i > 0)
                 {
                     //Reduces the XP from  the player
-                    Player.PlayerXP -= this.XPNeeded;
+                    LevelSystem.experiencePoints -= this.XPNeeded;
+
                     //Adds to the list of skills
                     Player.PlayerSkills.Add(this);
                     return true;
