@@ -6,25 +6,31 @@ using UnityEngine;
 public class PauseNew : MonoBehaviour {
 
     public GameObject pausePanel;
+    private bool isShowing;
 
-     public void Update() { 
-   
+    public void Update() {
+
         if (Input.GetKeyDown("p"))
         {
+            isShowing = !isShowing;
+
             //Pause the game on p key
-            if (Time.timeScale == 1)
+            if (Time.timeScale == 1 && isShowing == true)
             {
                 //When timeScale is set to zero the game is basically paused
                 Time.timeScale = 0;
-
-                //Show the paused menu 
-                pausePanel.SetActive(true);
+            }//End of if
+            else {
+                Time.timeScale = 1;
+            }
+             //Show the paused menu 
+            pausePanel.SetActive(isShowing);
 
                 //Used for press button
                 //pauseButton.SetActive(false);
                 //Time.timeScale = 0;
 
-            }//End of if
+            
             
         }//End of if
 
