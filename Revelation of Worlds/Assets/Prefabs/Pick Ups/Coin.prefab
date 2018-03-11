@@ -37,7 +37,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1443269767947756}
   m_LocalRotation: {x: 0.6532815, y: -0.27059808, z: 0.27059808, w: 0.6532815}
-  m_LocalPosition: {x: -346.92, y: 5, z: -294.27}
+  m_LocalPosition: {x: -346.92, y: -5, z: -294.27}
   m_LocalScale: {x: 0.5, y: 0.05, z: 0.5}
   m_Children: []
   m_Father: {fileID: 0}
@@ -98,8 +98,7 @@ MonoBehaviour:
   playerInRange: 0
   totalCoins: 0
   valueCoins: 10
-  coinDisplay: {fileID: 0}
-  coinSlider: {fileID: 0}
+  coinSystem: {fileID: 0}
 --- !u!136 &136192533049363380
 CapsuleCollider:
   m_ObjectHideFlags: 1
