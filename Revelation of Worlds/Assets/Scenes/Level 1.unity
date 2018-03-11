@@ -1082,6 +1082,21 @@ Prefab:
       propertyPath: m_Layer
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 23022892026646496, guid: d5945afa00881d645b1671ae0ba0ae50,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e6b2d28e7a62ed7489cfc932283bede4, type: 2}
+    - target: {fileID: 23054107929469106, guid: d5945afa00881d645b1671ae0ba0ae50,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e6b2d28e7a62ed7489cfc932283bede4, type: 2}
+    - target: {fileID: 23391051243141974, guid: d5945afa00881d645b1671ae0ba0ae50,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e6b2d28e7a62ed7489cfc932283bede4, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d5945afa00881d645b1671ae0ba0ae50, type: 2}
   m_IsPrefabParent: 0
@@ -2158,6 +2173,16 @@ Prefab:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 120755478665324788, guid: 3d27c6a883581d7439e1bd37a6ef6665,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 108390093946508868, guid: 3d27c6a883581d7439e1bd37a6ef6665,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3d27c6a883581d7439e1bd37a6ef6665, type: 2}
   m_IsPrefabParent: 0
@@ -2917,7 +2942,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerHealth: {fileID: 396838279}
-  enemy: {fileID: 1208712154209410, guid: 64076de4cf084064884618a769b15d35, type: 2}
+  enemy: {fileID: 1696226894116898, guid: 64076de4cf084064884618a769b15d35, type: 2}
   spawnTime: 3
   spawnPoints:
   - {fileID: 832891246}
@@ -3533,7 +3558,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 989a4bf7a7b25fc46bd867836c71f280, type: 2}
+  - {fileID: 2100000, guid: e6b2d28e7a62ed7489cfc932283bede4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4972,7 +4997,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 97d9a6143a17a1a47b7be21be3401f46, type: 2}
+  - {fileID: 2100000, guid: e6b2d28e7a62ed7489cfc932283bede4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -8460,7 +8485,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 0d5f3cdb9cc95874fb4b7494135cafe7, type: 2}
+  - {fileID: 2100000, guid: e6b2d28e7a62ed7489cfc932283bede4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
