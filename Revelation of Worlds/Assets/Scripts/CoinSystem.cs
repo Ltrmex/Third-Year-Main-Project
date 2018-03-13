@@ -34,7 +34,7 @@ public class CoinSystem : MonoBehaviour {
     {
         coinDisplay.text = "Coins: " + totalCoins;
         coinSlider.value = totalCoins;
-        if (Input.GetKeyDown("m"))
+        if (Input.GetKeyDown("x"))
         {
             totalCoins = 0;
         }

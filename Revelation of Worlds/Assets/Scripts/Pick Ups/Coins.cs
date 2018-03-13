@@ -3,11 +3,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// Author Cristina
 public class Coins : MonoBehaviour {
-    public bool playerInRange;                         // Whether player is within the trigger collider and can be attacked.
+    public bool playerInRange;                                                  // Whether player is within the trigger collider and can be attacked.
     public int totalCoins = 0;
-    public int valueCoins = 10;
-    public CoinSystem coinSystem;
+    public int valueCoin = 10;                                                  // One coin has a value of 10 
+    public CoinSystem coinSystem;                                               // Reference to CoinSystem
 
     private void Start()
     {
@@ -17,6 +18,7 @@ public class Coins : MonoBehaviour {
 
     void OnTriggerEnter(Collider player)
     {
+        // If the entering collider is the player...
         if (player.gameObject.CompareTag("Player"))
         {
             // ... the player is in range.
@@ -39,12 +41,12 @@ public class Coins : MonoBehaviour {
         if (playerInRange /*&& Input.GetKeyDown("e")*/)
         {
             // gameObject.SetActive(false);
-            Destroy(gameObject);            
+            Destroy(gameObject);           // It calls OnDestroy method           
         }
     }
     
     private void OnDestroy()
-    {
-        coinSystem.CoinsAdd(valueCoins);
+    {        
+        coinSystem.CoinsAdd(valueCoin);
     }
 }
