@@ -332,6 +332,7 @@
   <ItemGroup>
     <Compile Include="Assets\Menu.cs" />
     <Compile Include="Assets\OptionOnP.cs" />
+    <Compile Include="Assets\PauseMainMenu.cs" />
     <Compile Include="Assets\PauseMenu.cs" />
     <Compile Include="Assets\Scripts\Ability\Attributes.cs" />
     <Compile Include="Assets\Scripts\Ability\PlayerHandler.cs" />

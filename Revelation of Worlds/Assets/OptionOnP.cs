@@ -20,13 +20,7 @@ public class OptionOnP : MonoBehaviour {
                 //When timeScale is set to zero the game is basically paused
                 Time.timeScale = 0;
             }//End of if
-            else
-            {
-                Time.timeScale = 1;
-            }
-            //Show the paused menu 
-            optionPanel.SetActive(isShowing);
-
+           
             //Used for press button
             //pauseButton.SetActive(false);
             //Time.timeScale = 0;

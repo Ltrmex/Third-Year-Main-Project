@@ -38,7 +38,8 @@ public class PauseMenu : MonoBehaviour {
     {
         //SceneManager.LoadScene("Level01");
         //Loads the next level(next Scene)
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
     public void Quit()
@@ -52,14 +53,27 @@ public class PauseMenu : MonoBehaviour {
     {
         mainMenuHolder.SetActive(false);
         optionsMenuHolder.SetActive(true);
+        mainMenuHolder.SetActive(false);
     }
 
     public void MainMenu()
     {
         mainMenuHolder.SetActive(true);
         optionsMenuHolder.SetActive(false);
-    }
 
+    }
+    public void MainMenuPause()
+    {
+        mainOnPause.SetActive(true);
+        optionsMenuHolder.SetActive(false);
+        mainMenuHolder.SetActive(false);
+    }
+    public void Back()
+    {
+        mainMenuHolder.SetActive(true);
+        optionsMenuHolder.SetActive(false);
+        mainOnPause.SetActive(false);
+    }
     public void SetScreenResolution(int i)
     {
         if (resolutionToggles[i].isOn)
