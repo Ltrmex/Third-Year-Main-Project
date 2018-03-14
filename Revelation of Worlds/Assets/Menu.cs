@@ -9,6 +9,7 @@ public class Menu : MonoBehaviour
 
     public GameObject mainMenuHolder;
     public GameObject optionsMenuHolder;
+    
 
     public Toggle[] resolutionToggles;
     public Toggle fullscreenToggle;
