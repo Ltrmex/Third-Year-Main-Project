@@ -26,6 +26,7 @@ namespace Ability {
         // Use this for initialization
         void Start()
         {
+         
             m_PlayerHandler = this.GetComponentInParent<PlayerHandler>().Player;
             //Listener for the XP change
             m_PlayerHandler.onXPChange += ReactToChange;
