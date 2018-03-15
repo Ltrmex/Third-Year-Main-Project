@@ -24,7 +24,7 @@ MonoBehaviour:
   m_MinSize: {x: 709, y: 471}
   m_MaxSize: {x: 18004, y: 14021}
   vertical: 0
-  controlID: 13798
+  controlID: 6135
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -158,14 +158,14 @@ MonoBehaviour:
     height: 614
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SceneLighting: 1
-  lastFramingTime: 1952.6779906956513
-  m_2DMode: 1
+  lastFramingTime: 1398.500608094051
+  m_2DMode: 0
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 335.4148, y: 335.43362, z: 8.146352}
+    m_Target: {x: 6.771619, y: 1.3418263, z: 0.21687897}
     speed: 2
-    m_Value: {x: 335.4148, y: 335.43362, z: 8.146352}
+    m_Value: {x: 6.771619, y: 1.3418263, z: 0.21687897}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -181,25 +181,25 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
     yGrid:
-      m_Target: 0
-      speed: 2
-      m_Value: 0
-    zGrid:
       m_Target: 1
       speed: 2
       m_Value: 1
+    zGrid:
+      m_Target: 0
+      speed: 2
+      m_Value: 0
   m_Rotation:
-    m_Target: {x: 0, y: 0, z: 0, w: 1}
+    m_Target: {x: 0.40024966, y: 0.47278836, z: -0.25485656, w: 0.7425089}
     speed: 2
-    m_Value: {x: 0, y: 0, z: 0, w: 1}
+    m_Value: {x: 0.40024966, y: 0.47278836, z: -0.25485653, w: 0.7425089}
   m_Size:
-    m_Target: 630.46594
+    m_Target: 4.941659
     speed: 2
-    m_Value: 630.46594
+    m_Value: 4.941659
   m_Ortho:
-    m_Target: 1
+    m_Target: 0
     speed: 2
-    m_Value: 1
+    m_Value: 0
   m_ShowGlobalGrid: 1
   m_LastSceneViewRotation: {x: -0.08717229, y: 0.89959055, z: -0.21045254, w: -0.3726226}
   m_LastSceneViewOrtho: 0
@@ -289,12 +289,8 @@ MonoBehaviour:
       e32: 0
       e33: 1
   m_PreviewAnimator: {fileID: 0}
-  m_AnimatorController: {fileID: 9100000, guid: 22b4d9f43f1e85343ae912e43d7ed892,
-    type: 2}
-  m_BreadCrumbs:
-  - m_Target: {fileID: 1107654000917810984, guid: 22b4d9f43f1e85343ae912e43d7ed892,
-      type: 2}
-    m_ScrollPosition: {x: 0, y: 0}
+  m_AnimatorController: {fileID: 0}
+  m_BreadCrumbs: []
   stateMachineGraph: {fileID: 0}
   stateMachineGraphGUI: {fileID: 0}
   blendTreeGraph: {fileID: 0}
@@ -329,8 +325,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 92
-    width: 695
-    height: 710
+    width: 640
+    height: 614
   m_PersistentViewDataDictionary: {fileID: 0}
 --- !u!114 &7
 MonoBehaviour:
@@ -355,7 +351,7 @@ MonoBehaviour:
   m_MinSize: {x: 230, y: 471}
   m_MaxSize: {x: 10000, y: 14021}
   vertical: 1
-  controlID: 13739
+  controlID: 6136
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -409,10 +405,10 @@ MonoBehaviour:
     height: 286
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
-    scrollPos: {x: 0, y: 19}
-    m_SelectedIDs: a6420000
-    m_LastClickedID: 17062
-    m_ExpandedIDs: d2f8ffffdef8ffffeaf8fffff4f8ffff08f9ffff48f9ffffb2f9ffff5efaffff00000000c83e0000143f0000b83f0000dc4000005c420000a6420000
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: 16cc0000
+    m_LastClickedID: 0
+    m_ExpandedIDs: 62dffeffa4f8feff582fffff1e3affffd052ffffee64ffff8675ffff96fbffff00000000b4d400006ed60000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -499,20 +495,20 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets
+    - Assets/Imports
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets
+  - Assets/Imports
   m_LastFoldersGridSize: 16
   m_LastProjectPath: C:\Users\Ltrmex\Desktop\Projects\Third-Year-Main-Project\Revelation
     of Worlds
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 4c320000
-    m_LastClickedID: 12876
-    m_ExpandedIDs: 000000004c320000f232000004330000c0340000203500005e360000343800008e380000ca380000e63a0000da3b0000aa3c0000125100001451000016510000185100001a5100001c5100001e51000020510000225100002451000026510000ffffff7f
+    m_SelectedIDs: 8acc0000
+    m_LastClickedID: 52362
+    m_ExpandedIDs: 0000000074290000a42900001a2a0000e82b0000482c0000862d00005c2f0000b62f0000f22f00000e32000002330000d2330000bc400000be400000c0400000c2400000c4400000c6400000c8400000ca400000cc400000ce400000d0400000c0a90000ffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -540,7 +536,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000004c320000f232000004330000c0340000203500005e360000343800008e380000ca380000e63a0000da3b0000aa3c0000125100001451000016510000185100001a5100001c5100001e51000020510000225100002451000026510000ffffff7f
+    m_ExpandedIDs: 0000000074290000a42900001a2a0000e82b0000482c0000862d00005c2f0000b62f0000f22f00000e32000002330000d2330000bc400000be400000c0400000c2400000c4400000c6400000c8400000ca400000cc400000ce400000d0400000c0a90000ffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -565,10 +561,10 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: a6420000
-    m_LastClickedInstanceID: 17062
-    m_HadKeyboardFocusLastEvent: 0
-    m_ExpandedInstanceIDs: 9e2e00002e3100004c310000b42e0000e208feffda2c0000de2c0000bcabffff362bfaff56c50000fc30f6ff6206000000000000c4af0000e2060000a24400002c2a0000
+    m_SelectedInstanceIDs: 16cc0000
+    m_LastClickedInstanceID: 52246
+    m_HadKeyboardFocusLastEvent: 1
+    m_ExpandedInstanceIDs: 9e2e00002e3100004c310000b42e0000e208feffda2c0000de2c0000bcabffff362bfaff56c50000fc30f6ff6206000000000000c4af0000e2060000a24400002c2a0000ee2c0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -594,7 +590,7 @@ MonoBehaviour:
     m_NewAssetIndexInList: -1
     m_ScrollPosition: {x: 0, y: 0}
     m_GridSize: 16
-  m_DirectoriesAreaWidth: 110
+  m_DirectoriesAreaWidth: 144
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -647,7 +643,7 @@ MonoBehaviour:
     width: 390
     height: 614
   m_PersistentViewDataDictionary: {fileID: 0}
-  m_ScrollPosition: {x: 0, y: 381.95508}
+  m_ScrollPosition: {x: 0, y: 0}
   m_InspectorMode: 0
   m_PreviewResizer:
     m_CachedPref: 111

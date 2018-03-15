@@ -3,10 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2017
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Revelation of Worlds", "Revelation of Worlds.csproj", "{E9BF7A0E-8104-CDD5-659F-551512ADB731}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Revelation of Worlds.Plugins", "Revelation of Worlds.Plugins.csproj", "{8EF619C4-6F7E-6DD9-191A-87C43173E917}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Revelation of Worlds.Editor.Plugins", "Revelation of Worlds.Editor.Plugins.csproj", "{9D2CC188-A931-DAB2-CFE4-E7BCA3DE5FF2}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,14 +13,6 @@ Global
 		{E9BF7A0E-8104-CDD5-659F-551512ADB731}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E9BF7A0E-8104-CDD5-659F-551512ADB731}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E9BF7A0E-8104-CDD5-659F-551512ADB731}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8EF619C4-6F7E-6DD9-191A-87C43173E917}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8EF619C4-6F7E-6DD9-191A-87C43173E917}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8EF619C4-6F7E-6DD9-191A-87C43173E917}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8EF619C4-6F7E-6DD9-191A-87C43173E917}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9D2CC188-A931-DAB2-CFE4-E7BCA3DE5FF2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9D2CC188-A931-DAB2-CFE4-E7BCA3DE5FF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9D2CC188-A931-DAB2-CFE4-E7BCA3DE5FF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9D2CC188-A931-DAB2-CFE4-E7BCA3DE5FF2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
