@@ -5,17 +5,17 @@ using UnityEngine.UI;
 
 public class CreatePlayer : MonoBehaviour {
 
-    private PlayerClass newPlayer;
+    public static PlayerClass newPlayer;
     private string playerName = "Player 1";
     private CoinSystem coinsToSpend;
 
     //  UI
-    public Text strengthText;
-    public Text wisdomText;
-    public Text agilityText;
-    public Text armorText;
-    public Text hitPointsText;
+    public Text attackPowerText;
+    public Text healthText;
     public Text regenerationText;
+    public Text shieldText;
+    public Text movementSpeedText;
+    public Text attackSpeedText;
     public Text pointsText;
     GameObject coins;
 
@@ -34,57 +34,59 @@ public class CreatePlayer : MonoBehaviour {
         GameInfo.PlayerName = newPlayer.PlayerName;
         GameInfo.PlayerC = newPlayer.PlayerC;
 
-        GameInfo.Strength = newPlayer.Strength.ToString();
-        GameInfo.Wisdom = newPlayer.Wisdom.ToString();
-        GameInfo.Agility = newPlayer.Agility.ToString();
-        GameInfo.Armor = newPlayer.Armor.ToString();
-        GameInfo.HitPoints = newPlayer.HitPoints.ToString();
+        GameInfo.AttackPower = newPlayer.AttackPower.ToString();
+        GameInfo.Health = newPlayer.Health.ToString();
         GameInfo.Regeneration = newPlayer.Regeneration.ToString();
+        GameInfo.Shield = newPlayer.Shield.ToString();
+        GameInfo.MovementSpeed = newPlayer.MovementSpeed.ToString();
+        GameInfo.AttackSpeed = newPlayer.AttackSpeed.ToString();
     }
 
-    public void SetArcherClass() {
-        newPlayer.PlayerC = new ArcherClass();
+    public void SetSpeed() {
+        newPlayer.PlayerC = new Speed();
         SetPoints();
     }
 
-    public void SetWarriorClass() {
-        newPlayer.PlayerC = new WarriorClass();
+    public void SetDefence() {
+        newPlayer.PlayerC = new Defence();
         SetPoints();
     }
 
-    public void SetMageClass() {
-        newPlayer.PlayerC = new MageClass();
+    public void SetAttack() {
+        newPlayer.PlayerC = new Attack();
         SetPoints();
     }
 
     private void SetPoints() {
-        newPlayer.Strength = newPlayer.PlayerC.Strength;
-        newPlayer.Wisdom = newPlayer.PlayerC.Wisdom;
-        newPlayer.Agility = newPlayer.PlayerC.Agility;
-        newPlayer.Armor = newPlayer.PlayerC.Armor;
-        newPlayer.HitPoints = newPlayer.PlayerC.HitPoints;
+        newPlayer.AttackPower = newPlayer.PlayerC.AttackPower;
+        newPlayer.Health = newPlayer.PlayerC.Health;
         newPlayer.Regeneration = newPlayer.PlayerC.Regeneration;
+        newPlayer.Shield = newPlayer.PlayerC.Shield;
+        newPlayer.MovementSpeed = newPlayer.PlayerC.MovementSpeed;
+        newPlayer.AttackSpeed = newPlayer.PlayerC.AttackSpeed;
     }
 
     void Update() {
-        strengthText.text = newPlayer.Strength.ToString();
-        wisdomText.text = newPlayer.Wisdom.ToString();
-        agilityText.text = newPlayer.Agility.ToString();
-        armorText.text = newPlayer.Armor.ToString();
-        hitPointsText.text = newPlayer.HitPoints.ToString();
-        regenerationText.text = newPlayer.Regeneration.ToString();
+        float value = ((newPlayer.AttackSpeed * 10) - 10) * -1;
+
+        attackPowerText.text = newPlayer.AttackPower.ToString();
+        healthText.text = newPlayer.Health.ToString();
+        regenerationText.text = newPlayer.Regeneration.ToString("F2");
+        shieldText.text = newPlayer.Shield.ToString();
+        movementSpeedText.text = newPlayer.MovementSpeed.ToString("F2") + "%";
+        attackSpeedText.text = value.ToString("F2") + "%";
 
         pointsText.text = coinsToSpend.totalCoins.ToString();
     }
 
-    public void SetStrength(int amount) {
+    public void SetAttackPower(int amount) {
         if (newPlayer.PlayerC != null) {
             if (amount > 0 && coinsToSpend.totalCoins > 0) {
-                newPlayer.Strength += amount;
+                newPlayer.AttackPower += amount;
                 --coinsToSpend.totalCoins;
             }
-            else if (amount < 0 && newPlayer.Strength > newPlayer.PlayerC.Strength) {
-                newPlayer.Strength += amount;
+            else if (amount < 0 && newPlayer.AttackPower > newPlayer.PlayerC.AttackPower) {
+                newPlayer.AttackPower += amount;
                 ++coinsToSpend.totalCoins;
             }
             else {
@@ -93,81 +95,18 @@ public class CreatePlayer : MonoBehaviour {
         }
     }
 
-    public void SetWisdom(int amount)
+    public void SetHealth(int amount)
     {
         if (newPlayer.PlayerC != null)
         {
             if (amount > 0 && coinsToSpend.totalCoins > 0)
             {
-                newPlayer.Wisdom += amount;
+                newPlayer.Health += amount;
                 --coinsToSpend.totalCoins;
             }
-            else if (amount < 0 && newPlayer.Wisdom > newPlayer.PlayerC.Wisdom)
+            else if (amount < 0 && newPlayer.Health > newPlayer.PlayerC.Health)
             {
-                newPlayer.Wisdom += amount;
-                ++coinsToSpend.totalCoins;
-            }
-            else
-            {
-                Debug.Log("No Class Chosen!!!");
-            }
-        }
-    }
-
-    public void SetAgility(int amount)
-    {
-        if (newPlayer.PlayerC != null)
-        {
-            if (amount > 0 && coinsToSpend.totalCoins > 0)
-            {
-                newPlayer.Agility += amount;
-                --coinsToSpend.totalCoins;
-            }
-            else if (amount < 0 && newPlayer.Agility > newPlayer.PlayerC.Agility)
-            {
-                newPlayer.Agility += amount;
-                ++coinsToSpend.totalCoins;
-            }
-            else
-            {
-                Debug.Log("No Class Chosen!!!");
-            }
-        }
-    }
-
-    public void SetArmor(int amount)
-    {
-        if (newPlayer.PlayerC != null)
-        {
-            if (amount > 0 && coinsToSpend.totalCoins > 0)
-            {
-                newPlayer.Armor += amount;
-                --coinsToSpend.totalCoins;
-            }
-            else if (amount < 0 && newPlayer.Armor > newPlayer.PlayerC.Armor)
-            {
-                newPlayer.Armor += amount;
-                ++coinsToSpend.totalCoins;
-            }
-            else
-            {
-                Debug.Log("No Class Chosen!!!");
-            }
-        }
-    }
-
-    public void SetHitPoints(int amount)
-    {
-        if (newPlayer.PlayerC != null)
-        {
-            if (amount > 0 && coinsToSpend.totalCoins > 0)
-            {
-                newPlayer.HitPoints += amount;
-                --coinsToSpend.totalCoins;
-            }
-            else if (amount < 0 && newPlayer.HitPoints > newPlayer.PlayerC.HitPoints)
-            {
-                newPlayer.HitPoints += amount;
+                newPlayer.Health += amount;
                 ++coinsToSpend.totalCoins;
             }
             else
@@ -179,6 +118,7 @@ public class CreatePlayer : MonoBehaviour {
 
     public void SetRegeneration(int amount)
     {
+
         if (newPlayer.PlayerC != null)
         {
             if (amount > 0 && coinsToSpend.totalCoins > 0)
@@ -189,6 +129,73 @@ public class CreatePlayer : MonoBehaviour {
             else if (amount < 0 && newPlayer.Regeneration > newPlayer.PlayerC.Regeneration)
             {
                 newPlayer.Regeneration += amount;
+                ++coinsToSpend.totalCoins;
+            }
+            else
+            {
+                Debug.Log("No Class Chosen!!!");
+            }
+        }
+    }
+
+    public void SetShield(int amount)
+    {
+        if (newPlayer.PlayerC != null)
+        {
+            if (amount > 0 && coinsToSpend.totalCoins > 0)
+            {
+                newPlayer.Shield += amount;
+                --coinsToSpend.totalCoins;
+            }
+            else if (amount < 0 && newPlayer.Shield > newPlayer.PlayerC.Shield)
+            {
+                newPlayer.Shield += amount;
+                ++coinsToSpend.totalCoins;
+            }
+            else
+            {
+                Debug.Log("No Class Chosen!!!");
+            }
+        }
+    }
+
+    public void SetMovementSpeed(int num)
+    {
+        float amount = (float)num/8;
+
+        if (newPlayer.PlayerC != null)
+        {
+            if (amount > 0 && coinsToSpend.totalCoins > 0)
+            {
+                newPlayer.MovementSpeed += amount;
+                --coinsToSpend.totalCoins;
+            }
+            else if (amount < 0 && newPlayer.MovementSpeed > newPlayer.PlayerC.MovementSpeed)
+            {
+                newPlayer.MovementSpeed += amount;
+                ++coinsToSpend.totalCoins;
+            }
+            else
+            {
+                Debug.Log("No Class Chosen!!!");
+            }
+        }
+    }
+
+    public void SetAttackSpeed(int num)
+    {
+        float amount = (float)num/150;
+
+        if (newPlayer.PlayerC != null)
+        {
+            if (amount > 0 && coinsToSpend.totalCoins > 0)
+            {
+                newPlayer.AttackSpeed += amount;
+                --coinsToSpend.totalCoins;
+            }
+            else if (amount < 0)
+            {
+                newPlayer.AttackSpeed += amount;
                 ++coinsToSpend.totalCoins;
             }
             else

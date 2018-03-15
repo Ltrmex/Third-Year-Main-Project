@@ -4,12 +4,13 @@ using System.Collections;
 
 public class PlayerHealth : MonoBehaviour
 {
-    public int startingHealth = 100;                            // The amount of health the player starts the game with.
+    public int startingHealth;                            // The amount of health the player starts the game with.
     public int currentHealth;                                   // The current health the player has.
-    public int startingShieldPower = 100;
+    public int startingShieldPower;
     public int currentShieldPower;
     public Text shieldDisplay;
     public Text healthDisplay;
+    public int regeneration = 0;
     public Slider shieldSlider;
     public Slider healthSlider;                                 // Reference to the UI's health bar.
     public Image damageImage;                                   // Reference to an image to flash on the screen on being hurt.
@@ -24,7 +25,6 @@ public class PlayerHealth : MonoBehaviour
     bool isDead;                                                // Whether the player is dead.
     bool damaged;                                               // True when the player gets damaged.
 
-
     void Awake()
     {
         // Setting up the references.
@@ -32,15 +32,30 @@ public class PlayerHealth : MonoBehaviour
         //playerAudio = GetComponent<AudioSource>();
         playerMovement = GetComponent<PlayerMovement>();
         playerShooting = GetComponentInChildren<PlayerShooting>();
-
-        // Set the initial health of the player.
-        currentHealth = startingHealth;
-        currentShieldPower = startingShieldPower;
     }
 
 
+    private void Start() {
+        InvokeRepeating("Heal", 0, 0.5f);
+    }
+
+    void Heal() {
+        currentHealth += regeneration;
+    }
+
+    public void ChangeValue() {
+        currentHealth = CreatePlayer.newPlayer.Health;
+        currentShieldPower = CreatePlayer.newPlayer.Shield;
+    }
+
     void Update()
     {
+        startingHealth = CreatePlayer.newPlayer.Health;
+        startingShieldPower = CreatePlayer.newPlayer.Shield;
+
+        if (startingHealth > 100)
+            CancelInvoke("Heal");
+
         // If the player has just been damaged...
         if (damaged)
         {

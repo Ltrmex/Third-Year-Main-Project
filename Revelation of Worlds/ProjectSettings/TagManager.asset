@@ -9,6 +9,7 @@ TagManager:
   - Coins
   - EXP
   - Stats
+  - Gun
   layers:
   - Default
   - TransparentFX

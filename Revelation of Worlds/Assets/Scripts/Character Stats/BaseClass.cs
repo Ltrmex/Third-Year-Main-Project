@@ -4,40 +4,40 @@ using UnityEngine;
 
 public class BaseClass {
     //  Variables
-    private int strength;
-    private int wisdom;
-    private int agility;
-    private int armor;
-    private int hitPoints;
+    private int attackPower;
+    private int health;
     private int regeneration;
+    private int shield;
+    private float movementSpeed;
+    private float attackSpeed;
 
-    public int Strength {
-        get { return strength; }
-        set { strength = value;  }
+    public int AttackPower {
+        get { return attackPower; }
+        set { attackPower = value;  }
     }
 
-    public int Wisdom {
-        get { return wisdom; }
-        set { wisdom = value; }
-    }
-
-    public int Agility {
-        get { return agility; }
-        set { agility = value; }
-    }
-
-    public int Armor {
-        get { return armor; }
-        set { armor = value; }
-    }
-
-    public int HitPoints {
-        get { return hitPoints; }
-        set { hitPoints = value; }
+    public int Health {
+        get { return health; }
+        set { health = value; }
     }
 
     public int Regeneration {
         get { return regeneration; }
         set { regeneration = value; }
+    }
+
+    public int Shield {
+        get { return shield; }
+        set { shield = value; }
+    }
+
+    public float MovementSpeed {
+        get { return movementSpeed; }
+        set { movementSpeed = value; }
+    }
+
+    public float AttackSpeed {
+        get { return attackSpeed; }
+        set { attackSpeed = value; }
     }
 }

@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class PlayerClass {
     //  Variables
-    private int strength;
-    private int wisdom;
-    private int agility;
-    private int armor;
-    private int hitPoints;
+    private int attackPower;
+    private int health;
     private int regeneration;
+    private int shield;
+    private float movementSpeed;
+    private float attackSpeed;
 
     private string playerName;
     private int playerLevel;
@@ -32,39 +32,48 @@ public class PlayerClass {
         set { playerClass = value; }
     }
 
-    public int Strength
+    public PlayerClass() {
+        attackPower = 1;
+        health = 1;
+        regeneration = 0;
+        shield = 1;
+        movementSpeed = 1.0f;
+        attackSpeed = 1.0f;
+}
+
+    public int AttackPower
     {
-        get { return strength; }
-        set { strength = value; }
+        get { return attackPower; }
+        set { attackPower = value; }
     }
 
-    public int Wisdom
+    public int Health
     {
-        get { return wisdom; }
-        set { wisdom = value; }
-    }
-
-    public int Agility
-    {
-        get { return agility; }
-        set { agility = value; }
-    }
-
-    public int Armor
-    {
-        get { return armor; }
-        set { armor = value; }
-    }
-
-    public int HitPoints
-    {
-        get { return hitPoints; }
-        set { hitPoints = value; }
+        get { return health; }
+        set { health = value; }
     }
 
     public int Regeneration
     {
         get { return regeneration; }
         set { regeneration = value; }
+    }
+
+    public int Shield
+    {
+        get { return shield; }
+        set { shield = value; }
+    }
+
+    public float MovementSpeed
+    {
+        get { return movementSpeed; }
+        set { movementSpeed = value; }
+    }
+
+    public float AttackSpeed
+    {
+        get { return attackSpeed; }
+        set { attackSpeed = value; }
     }
 }
