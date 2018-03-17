@@ -12,38 +12,37 @@ public class GameOverManager : MonoBehaviour {
     public PlayerHealth playerHealth;
     // Time to wait before restarting the level
     public float restartDelay = 5f;
-
-    // Reference to the animator component.
-    Animator anim;
     // Timer to count up to restarting the level
-    float restartTimer;                    
-
-
-    void Awake()
+    float restartTimer;
+    public GameObject GameOverPanel;
+    public GameObject HudCanvas;
+    // Use this for initialization
+    void Start()
     {
-        // Set up the reference using GetComponent
-        anim = GetComponent<Animator>();
+        restartTimer = Time.time;
     }
-
 
     void Update()
     {
         // If the player has run out of health...
-        if (playerHealth.currentHealth <= 0)
+        if (playerHealth.currentHealth < 0)
         {
-            //Tell the animator the game is over.
-            anim.SetTrigger("GameOver");
-
-            //Increment a timer to count up to restarting.
-            restartTimer += Time.deltaTime;
-
-            // .. if it reaches the restart delay...
-            //Can be use when we'll add different levels
-           /* if (restartTimer >= restartDelay)
+            if (Time.time > restartTimer + restartDelay)
             {
-                // .. then reload the currently loaded level.
-                Application.LoadLevel(Application.loadedLevel);
-            }*/
+                //Increment a timer to count up to restarting.
+                restartTimer += Time.deltaTime;
+                GameOverPanel.SetActive(true);
+                HudCanvas.SetActive(false);
+
+                // .. if it reaches the restart delay...
+                //Can be use when we'll add different levels
+                /* if (restartTimer >= restartDelay)
+                 {
+                     // .. then reload the currently loaded level.
+                     Application.LoadLevel(Application.loadedLevel);
+                 }*/
+            }
         }
+           
     }
 }
