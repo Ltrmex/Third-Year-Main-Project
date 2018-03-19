@@ -5,71 +5,83 @@ using UnityEngine.UI;
 
 public class Abilities : MonoBehaviour {
     public GameObject[] abilities;
+    public Button referenceToTheButton;
 
     private void Update()
     {
         if (Input.GetKeyDown("1"))
-            firstSkill();
+            FirstSkill();
         else if (Input.GetKeyDown("2"))
-            secondSkill();
+            SecondSkill();
         else if (Input.GetKeyDown("3"))
-            thirdSkill();
+            ThirdSkill();
         else if (Input.GetKeyDown("4"))
-            fourthSkill();
+            FourthSkill();
         else if (Input.GetKeyDown("5"))
-            fifthSkill();
+            FifthSkill();
         else if (Input.GetKeyDown("6"))
-            sixthSkill();
+            SixthSkill();
 
     }
 
     private void Start()
     {
-
+        abilities = GameObject.FindGameObjectsWithTag("Abilities");
     }
 
-    IEnumerator ExecuteAfterTime(float time, int num)
+    IEnumerator ExecuteAfterTime(float time, int num, int stat)
     {
-        abilities = GameObject.FindGameObjectsWithTag("Abilities");
         Image gameObjectRenderer = abilities[num].GetComponent<Image>();
+
         gameObjectRenderer.color = Color.red;
         yield return new WaitForSeconds(time);
         gameObjectRenderer.color = Color.white;
+
+        referenceToTheButton.onClick.Invoke();
     }
 
-    public void firstSkill()
+    public void FirstSkill()
     {
-        Debug.Log("Skill 1");
-        StartCoroutine(ExecuteAfterTime(1, 5));
+        ++CreatePlayer.newPlayer.Health;
+        referenceToTheButton.onClick.Invoke();
+
+        StartCoroutine(ExecuteAfterTime(10, 0, --CreatePlayer.newPlayer.Health));
     }
 
-    public void secondSkill()
+    public void SecondSkill()
     {
-        Debug.Log("Skill 2");
-        StartCoroutine(ExecuteAfterTime(1, 4));
+        ++CreatePlayer.newPlayer.AttackPower;
+        StartCoroutine(ExecuteAfterTime(10, 2, --CreatePlayer.newPlayer.AttackPower));
     }
 
-    public void thirdSkill()
+    public void ThirdSkill()
     {
-        Debug.Log("Skill 3");
-        StartCoroutine(ExecuteAfterTime(1, 3));
+        ++CreatePlayer.newPlayer.Shield;
+        referenceToTheButton.onClick.Invoke();
+        StartCoroutine(ExecuteAfterTime(10, 3, --CreatePlayer.newPlayer.Shield));
     }
 
-    public void fourthSkill()
+    public void FourthSkill()
     {
-        Debug.Log("Skill 4");
-        StartCoroutine(ExecuteAfterTime(1, 2));
+        ++CreatePlayer.newPlayer.Health;
+
+        StartCoroutine(ExecuteAfterTime(20, 1, CreatePlayer.newPlayer.Health -= 5));
+        referenceToTheButton.onClick.Invoke();
     }
 
-    public void fifthSkill()
+    public void FifthSkill()
     {
-        Debug.Log("Skill 5");
-        StartCoroutine(ExecuteAfterTime(1, 1));
+        CreatePlayer.newPlayer.AttackPower += 5;
+        referenceToTheButton.onClick.Invoke();
+
+        
+        StartCoroutine(ExecuteAfterTime(20, 4, CreatePlayer.newPlayer.AttackPower -= 5));
     }
 
-    public void sixthSkill()
+    public void SixthSkill()
     {
-        Debug.Log("Skill 6");
-        StartCoroutine(ExecuteAfterTime(1, 0));
+        CreatePlayer.newPlayer.Shield += 5;
+        StartCoroutine(ExecuteAfterTime(20, 1, CreatePlayer.newPlayer.Shield -= 5));
+
     }
 }

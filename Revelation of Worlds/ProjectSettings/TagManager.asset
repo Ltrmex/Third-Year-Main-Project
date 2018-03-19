@@ -11,6 +11,7 @@ TagManager:
   - Stats
   - Gun
   - Abilities
+  - Apply
   layers:
   - Default
   - TransparentFX
