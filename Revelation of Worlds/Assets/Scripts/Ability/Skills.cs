@@ -109,6 +109,7 @@ namespace Ability
             }//End of while loop
             return false;
         }//End of SetValues method
+
     }//End of Skills class
 }//End of namespace
 
