@@ -9,8 +9,8 @@ public class Attack : BaseClass {
         Health = 50;
         Regeneration = 0;
         Shield = 10;
-        MovementSpeed = 1.0f;
-        AttackSpeed = 0.7f;
+        MovementSpeed = 6f;
+        AttackSpeed = 0.015f;
     }
 
 }

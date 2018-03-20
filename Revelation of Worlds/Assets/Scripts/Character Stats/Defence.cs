@@ -9,7 +9,7 @@ public class Defence : BaseClass {
         Health = 70;
         Regeneration = 0;
         Shield = 30;
-        MovementSpeed = 1f;
-        AttackSpeed = 0.7f;
+        MovementSpeed = 6f;
+        AttackSpeed = 0.015f;
     }
 }
