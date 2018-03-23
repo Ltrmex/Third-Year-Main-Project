@@ -35,6 +35,7 @@ public class LevelSystem : MonoBehaviour {
             currentLevel = ourLevel;
             ScoringTime.isLevelUp = true;
             StarRating.isLevelUp = true;
+            DifficultyRaise.isLevelUp = true;
         }
             
 

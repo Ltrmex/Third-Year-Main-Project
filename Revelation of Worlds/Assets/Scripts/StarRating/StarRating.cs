@@ -12,7 +12,6 @@ public class StarRating : MonoBehaviour
     private float totalTime;
     public static bool isLevelUp;
 
-
     // Use this for initialization
     void Start()
     {

@@ -27,14 +27,8 @@ public class MapGenerator : MonoBehaviour {
         GenerateMap();  //  generate map
     }   //  Start()
 
-    void Update() {
-        //  Everytime we press left mouse button we generate a new map
-        if (Input.GetKeyDown("q"))
-            GenerateMap();
-    }   //  Update()
-
     //  Generates the map
-    void GenerateMap() {
+    public void GenerateMap() {
         map = new int[width, height];   //  size of the map
         RandomFillMap();    //  call fill map
 

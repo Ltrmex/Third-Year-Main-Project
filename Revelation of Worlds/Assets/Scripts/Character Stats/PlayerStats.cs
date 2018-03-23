@@ -5,10 +5,10 @@ using UnityEngine.UI;
 
 public class PlayerStats : MonoBehaviour {
 
-    public PlayerMovement playerMovement;
-    public Player playerMovement2;
-    public PlayerHealth playerHealth;
-    public PlayerShooting playerShooting;
+    private PlayerMovement playerMovement;
+    private Player playerMovement2;
+    private PlayerHealth playerHealth;
+    private PlayerShooting playerShooting;
 
     GameObject player;
     GameObject gun;
