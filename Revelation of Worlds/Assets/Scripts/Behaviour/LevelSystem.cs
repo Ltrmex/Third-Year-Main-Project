@@ -31,8 +31,14 @@ public class LevelSystem : MonoBehaviour {
         int ourLevel = (int)(0.1f * Mathf.Sqrt(experiencePoints));
 
         if (ourLevel != currentLevel)
+        {
             currentLevel = ourLevel;
+            ScoringTime.isLevelUp = true;
+            StarRating.isLevelUp = true;
+        }
+            
 
+        
         int experienceNeeded = 100 * (currentLevel + 1) * (currentLevel + 1);
         int difference = experienceNeeded - experiencePoints;
 
