@@ -308,6 +308,7 @@
     <Compile Include="Assets\Scripts\Behaviour\CameraSetup.cs" />
     <Compile Include="Assets\Scripts\Behaviour\DifficultyRaise.cs" />
     <Compile Include="Assets\Scripts\Behaviour\GameOverManager.cs" />
+    <Compile Include="Assets\Scripts\Behaviour\GameStats.cs" />
     <Compile Include="Assets\Scripts\Behaviour\LevelSystem.cs" />
     <Compile Include="Assets\Scripts\Behaviour\MainMenu.cs" />
     <Compile Include="Assets\Scripts\Behaviour\Menu.cs" />
