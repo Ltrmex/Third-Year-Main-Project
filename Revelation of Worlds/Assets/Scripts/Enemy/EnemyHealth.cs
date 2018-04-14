@@ -9,6 +9,7 @@ public class EnemyHealth : MonoBehaviour
     public int experienceValue = 200;
     public AudioClip deathClip;                 // The sound to play when the enemy dies.
     public GameObject coin;
+    public static int enemyCount;
 
     //Animator anim;                              // Reference to the animator.
     //AudioSource enemyAudio;                     // Reference to the audio source.
@@ -88,6 +89,7 @@ public class EnemyHealth : MonoBehaviour
         //enemyAudio.clip = deathClip;
         //enemyAudio.Play();
 
+        ++enemyCount;
 
         // Create an instance of the enemy prefab at the randomly selected spawn point's position and rotation.
         Instantiate(coin, transform.position,  transform.rotation);

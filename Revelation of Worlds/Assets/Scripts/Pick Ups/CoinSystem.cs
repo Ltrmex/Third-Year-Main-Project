@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class CoinSystem : MonoBehaviour {
     public int totalCoins;
-    public int collectedCoins = 0;
+    public static int collectedCoins = 0;
     public Text coinDisplay;
     public Slider coinSlider;                          // Reference to the UI's health bar.
 
@@ -25,7 +25,7 @@ public class CoinSystem : MonoBehaviour {
         totalCoins += coinsToAdd;
         if (totalCoins != 0)
         {
-            collectedCoins += coinsToAdd;
+            ++collectedCoins;
             PlayerPrefs.SetInt("AmountCoins", totalCoins);
         }
         

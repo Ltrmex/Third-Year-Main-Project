@@ -5,7 +5,12 @@ using UnityEngine;
 public class VisibleTabs : MonoBehaviour {
 
     public GameObject tabsPanel;
-    private bool isShowing;
+    private bool isShowing = true;
+
+    private void Start()
+    {
+        Time.timeScale = 0;
+    }
 
     // Update is called once per frame
     void Update()

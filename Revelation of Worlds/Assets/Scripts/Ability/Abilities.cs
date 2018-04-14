@@ -24,11 +24,6 @@ public class Abilities : MonoBehaviour {
 
     }
 
-    private void Start()
-    {
-        abilities = GameObject.FindGameObjectsWithTag("Abilities");
-    }
-
     IEnumerator ExecuteAfterTime(float time, int num, int stat)
     {
         Image gameObjectRenderer = abilities[num].GetComponent<Image>();
@@ -51,21 +46,21 @@ public class Abilities : MonoBehaviour {
     public void SecondSkill()
     {
         ++CreatePlayer.newPlayer.AttackPower;
-        StartCoroutine(ExecuteAfterTime(10, 2, --CreatePlayer.newPlayer.AttackPower));
+        StartCoroutine(ExecuteAfterTime(10, 1, --CreatePlayer.newPlayer.AttackPower));
     }
 
     public void ThirdSkill()
     {
         ++CreatePlayer.newPlayer.Shield;
         referenceToTheButton.onClick.Invoke();
-        StartCoroutine(ExecuteAfterTime(10, 3, --CreatePlayer.newPlayer.Shield));
+        StartCoroutine(ExecuteAfterTime(10, 2, --CreatePlayer.newPlayer.Shield));
     }
 
     public void FourthSkill()
     {
         ++CreatePlayer.newPlayer.Health;
 
-        StartCoroutine(ExecuteAfterTime(20, 1, CreatePlayer.newPlayer.Health -= 5));
+        StartCoroutine(ExecuteAfterTime(20, 3, CreatePlayer.newPlayer.Health -= 5));
         referenceToTheButton.onClick.Invoke();
     }
 
@@ -81,7 +76,7 @@ public class Abilities : MonoBehaviour {
     public void SixthSkill()
     {
         CreatePlayer.newPlayer.Shield += 5;
-        StartCoroutine(ExecuteAfterTime(20, 1, CreatePlayer.newPlayer.Shield -= 5));
+        StartCoroutine(ExecuteAfterTime(20, 5, CreatePlayer.newPlayer.Shield -= 5));
 
     }
 }

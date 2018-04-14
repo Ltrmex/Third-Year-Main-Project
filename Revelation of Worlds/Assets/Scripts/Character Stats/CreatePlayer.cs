@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 public class CreatePlayer : MonoBehaviour {
@@ -24,7 +22,9 @@ public class CreatePlayer : MonoBehaviour {
         coins = GameObject.FindGameObjectWithTag("Coins");
         coinsToSpend = coins.GetComponent<CoinSystem>();
         newPlayer = new PlayerClass();
-	}
+        SetSpeed();
+
+    }
 
     public void CreateNewPlayer() {
         newPlayer.PlayerLevel = 1;

@@ -71,8 +71,17 @@ public class PlayerHealth : MonoBehaviour
 
         // Reset the damaged flag.
         damaged = false;
-        healthDisplay.text = "Health: " + currentHealth;
-        shieldDisplay.text = "Shield: " + currentShieldPower;
+
+        if (currentShieldPower <= 0)
+            shieldDisplay.text = "Shield: 0";
+        else
+            shieldDisplay.text = "Shield: " + currentShieldPower;
+
+        if (currentHealth <= 0)
+            healthDisplay.text = "Health: 0";
+        else
+            healthDisplay.text = "Health: " + currentHealth;
+
     }
 
 
