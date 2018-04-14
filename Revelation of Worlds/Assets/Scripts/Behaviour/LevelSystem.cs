@@ -13,9 +13,7 @@ public class LevelSystem : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        currentLevel = 0;
         experiencePoints = 0;
-
     }
 
 	// Update is called once per frame
@@ -30,15 +28,12 @@ public class LevelSystem : MonoBehaviour {
     void ExperienceUpdate() {
         int ourLevel = (int)(0.1f * Mathf.Sqrt(experiencePoints));
 
-        if (ourLevel != currentLevel)
-        {
+        if (ourLevel != currentLevel) {
             currentLevel = ourLevel;
             ScoringTime.isLevelUp = true;
             StarRating.isLevelUp = true;
             DifficultyRaise.isLevelUp = true;
         }
-            
-
         
         int experienceNeeded = 100 * (currentLevel + 1) * (currentLevel + 1);
         int difference = experienceNeeded - experiencePoints;

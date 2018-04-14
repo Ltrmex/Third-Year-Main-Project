@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-//Author: Kamila Michel
+//Author: Kamila Michel, Maciej Majchrzak
 //Student: G00340498
 //Code adapted from: https://unity3d.com/learn/tutorials/projects/survival-shooter/game-over?playlist=17144
 
@@ -16,10 +16,21 @@ public class GameOverManager : MonoBehaviour {
     float restartTimer;
     public GameObject GameOverPanel;
     public GameObject HudCanvas;
+    private DataController dataController;
+    public GameObject levelSystem;
+    private LevelSystem level;
+    bool isClicked = false;
+
     // Use this for initialization
     void Start()
     {
         restartTimer = Time.time;
+        dataController = FindObjectOfType<DataController>();
+        level = levelSystem.GetComponent<LevelSystem>();
+    }
+
+    public void Clicked() {
+        isClicked = true;
     }
 
     void Update()
@@ -34,6 +45,8 @@ public class GameOverManager : MonoBehaviour {
                 GameOverPanel.SetActive(true);
                 HudCanvas.SetActive(false);
 
+                if(isClicked)
+                    dataController.Submit(level.currentLevel, EnemyHealth.enemyCount, ScoreManager.score);
                 // .. if it reaches the restart delay...
                 //Can be use when we'll add different levels
                 /* if (restartTimer >= restartDelay)

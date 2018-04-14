@@ -1,42 +1,41 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 
-// Author: Cristina
-// Code adapted from: https://unity3d.com/learn/tutorials/projects/survival-shooter/more-enemies?playlist=17144
-public class EnemyManager : MonoBehaviour
-{
-    public PlayerHealth playerHealth;       // Reference to the player's heatlh.
-    public GameObject enemy;                // The enemy prefab to be spawned.
-    public float spawnTime = 3f;            // How long between each spawn.
-    public Transform[] spawnPoints;         // An array of the spawn points this enemy can spawn from.
+// Author: Maciej
+public class EnemyManager : MonoBehaviour {
+    public PlayerHealth playerHealth;
+    public Transform []spawnPoints;
+    public GameObject enemy;
+    public float spawnWait;
+    public float startWait;
+    public float waveWait;
+    private int waveNumber;
 
-
-    void Start ()
-    {
-        // Code adapted from: https://docs.unity3d.com/ScriptReference/Object.FindObjectOfType.html
-        // Call the Spawn function after a delay of the spawnTime and then continue to call after the same amount of time.
-        InvokeRepeating("Spawn", spawnTime, spawnTime);
+    private void Start() {
         playerHealth = (PlayerHealth)FindObjectOfType(typeof(PlayerHealth));
+        StartCoroutine("SpawnWave");
+    }   //  Start()
 
+    IEnumerator SpawnWave() {
+        if (playerHealth.isDead)
+            StopCoroutine("SpawnWave");
 
-    }
+        int randPosition = Random.Range(0, 9);
 
-    void Spawn ()
-    {
-        // If the player has no health left...
-        if(playerHealth.currentHealth <= 0f)
-        {
-            // ... exit the function.
-            return;
-        }
+        yield return new WaitForSeconds(startWait);
 
-        // Find a random index between zero and one less than the number of spawn points.
-        int spawnPointIndex = Random.Range (0, spawnPoints.Length);
+        while (true) {
+            for (int i = 1; i <= Random.Range(1, 10); i++) {
+                Instantiate(enemy, spawnPoints[randPosition].position, spawnPoints[randPosition].rotation);
+                yield return new WaitForSeconds(spawnWait);
+            }   //  for
+            yield return new WaitForSeconds(waveWait);
+            ++waveNumber;
 
-        //Checks if the referenced object exists
-        if (enemy)
-        {
-            // Create an instance of the enemy prefab at the randomly selected spawn point's position and rotation.
-            Instantiate(enemy, spawnPoints[spawnPointIndex].position, spawnPoints[spawnPointIndex].rotation);
-        }
-    }
+            if (waveNumber % 10 == 0) {
+                if (!(waveWait <= 3))
+                    waveWait -= 0.5f;
+            }   //  if
+        }   //  while
+    }   //   SpawnWave()
 }

@@ -4,7 +4,7 @@ using System.Collections;
 
 public class PlayerHealth : MonoBehaviour
 {
-    public int startingHealth;                            // The amount of health the player starts the game with.
+    public int startingHealth = 1;                            // The amount of health the player starts the game with.
     public int currentHealth;                                   // The current health the player has.
     public int startingShieldPower;
     public int currentShieldPower;
@@ -22,7 +22,7 @@ public class PlayerHealth : MonoBehaviour
     AudioSource playerAudio;                                    // Reference to the AudioSource component.
     PlayerMovement playerMovement;                              // Reference to the player's movement.
     PlayerShooting playerShooting;                              // Reference to the PlayerShooting script.
-    bool isDead;                                                // Whether the player is dead.
+    public bool isDead;                                                // Whether the player is dead.
     bool damaged;                                               // True when the player gets damaged.
 
     void Awake()

@@ -297,7 +297,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\GameOver.cs" />
     <Compile Include="Assets\Scripts\Ability\Abilities.cs" />
     <Compile Include="Assets\Scripts\Ability\Attributes.cs" />
     <Compile Include="Assets\Scripts\Ability\PlayerHandler.cs" />
@@ -321,6 +320,8 @@
     <Compile Include="Assets\Scripts\Character Stats\PlayerClass.cs" />
     <Compile Include="Assets\Scripts\Character Stats\PlayerStats.cs" />
     <Compile Include="Assets\Scripts\Character Stats\Speed.cs" />
+    <Compile Include="Assets\Scripts\Data.cs" />
+    <Compile Include="Assets\Scripts\DataController.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemyAttack.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemyHealth.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemyManager.cs" />
@@ -328,6 +329,8 @@
     <Compile Include="Assets\Scripts\Environment\MapGenerator.cs" />
     <Compile Include="Assets\Scripts\Environment\MeshGenerator.cs" />
     <Compile Include="Assets\Scripts\Environment\MiniMapScript.cs" />
+    <Compile Include="Assets\Scripts\GameOver.cs" />
+    <Compile Include="Assets\Scripts\Highscore.cs" />
     <Compile Include="Assets\Scripts\Music\ChangeMusicVolume.cs" />
     <Compile Include="Assets\Scripts\Pause\OptionOnP.cs" />
     <Compile Include="Assets\Scripts\Pause\PauseMainMenu.cs" />
@@ -344,6 +347,7 @@
     <Compile Include="Assets\Scripts\StarRating\ScoringTime.cs" />
     <Compile Include="Assets\Scripts\StarRating\StarRating.cs" />
     <Compile Include="Assets\Scripts\Tabs\VisibleTabs.cs" />
+    <Compile Include="Assets\Scripts\User.cs" />
     <Compile Include="Assets\Textures\Simple Vector Icons\Sample\IconPreview.cs" />
   </ItemGroup>
   <ItemGroup>
