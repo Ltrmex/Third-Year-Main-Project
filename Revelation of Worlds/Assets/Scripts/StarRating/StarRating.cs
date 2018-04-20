@@ -6,45 +6,50 @@ using System;
 
 public class StarRating : MonoBehaviour
 {
-    private int noStars, level, i, currentLevel;
-    private LevelSystem levelSystem;
+    private int noStars, level;
+    private PlayerHealth playerHealth;
     private InitialiseStars initStars;
     private float totalTime;
-    public static bool isLevelUp;
+    //public static bool isLevelUp;
 
     // Use this for initialization
     void Start()
     {
-        levelSystem = FindObjectOfType<LevelSystem>();
         initStars = FindObjectOfType<InitialiseStars>();
-        i = 1;
+        playerHealth = (PlayerHealth)FindObjectOfType(typeof(PlayerHealth));
     }
-
 
     // Update is called once per frame
     private void Update()
     {
 
-        level = levelSystem.currentLevel;
-        if (isLevelUp == true)
-        {
-            isLevelUp = false;
-            totalTime = 0;
-        }
+        level = LevelSystem.currentLevel;
+        //if (isLevelUp == true)
+        //{
+        //    isLevelUp = false;
+        //    totalTime = 0;
+        //}
 
         if (level > 0)
         {
             totalTime += Time.deltaTime;
-            StarsCount(totalTime);
-            //  CalculateRating(noStars); 
+            calculateStars(ScoreManager.score);
+            // StarsCountFromTime(totalTime);
         }
+
+        if (playerHealth.isDead == true)
+        {
+            ShowStars(noStars);
+        }
+
 
 
     } // Update
 
-    /*private void CalculateRating(int noStars)
+    private void ShowStars(int noStars)
     {
-        switch (noStars) {
+        switch (noStars)
+        {
             case 3:
                 initStars.Star1.GetComponent<Image>().enabled = false;
                 initStars.Star2.GetComponent<Image>().enabled = false;
@@ -64,42 +69,19 @@ public class StarRating : MonoBehaviour
 
                 initStars.Star1.GetComponent<Image>().enabled = true;
                 break;
+
         }
+    }
 
-    } */ // CalculateRating
-
-    public void StarsCount(float totalTime)
+    private void calculateStars(int score)
     {
-
-        
-        // if time < 5 then 3 stars
-        if (totalTime <= 5) {
+        if (score >= 1000)
             noStars = 3;
-
-            initStars.Star1.GetComponent<Image>().enabled = false;
-            initStars.Star2.GetComponent<Image>().enabled = false;
-
-            initStars.Star3.GetComponent<Image>().enabled = true;
-        } 
-        // if time between 5 and 10 then 2 stars
-        else if (totalTime > 5 && totalTime <= 10) {            
+        else if (score < 1000 && score > 500)
             noStars = 2;
-
-            initStars.Star1.GetComponent<Image>().enabled = false;
-            initStars.Star3.GetComponent<Image>().enabled = false;
-
-            initStars.Star2.GetComponent<Image>().enabled = true;
-        }
-        // if time > 10 then 3 stars
-        else {
+        else
             noStars = 1;
 
+    }
 
-            initStars.Star3.GetComponent<Image>().enabled = false;
-            initStars.Star2.GetComponent<Image>().enabled = false;
-
-            initStars.Star1.GetComponent<Image>().enabled = true;
-        }
-
-    } // StarsCount
 }

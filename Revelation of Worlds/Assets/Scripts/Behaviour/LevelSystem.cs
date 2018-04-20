@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class LevelSystem : MonoBehaviour {
 
     public static int experiencePoints;
-    public int currentLevel;
+    public static int currentLevel;
     public Text displayLevel;
     public Text experienceDisplay;
     public Slider experienceSlider;
@@ -30,8 +30,8 @@ public class LevelSystem : MonoBehaviour {
 
         if (ourLevel != currentLevel) {
             currentLevel = ourLevel;
-            ScoringTime.isLevelUp = true;
-            StarRating.isLevelUp = true;
+            //ScoringTime.isLevelUp = true;
+            //StarRating.isLevelUp = true;
             DifficultyRaise.isLevelUp = true;
         }
         

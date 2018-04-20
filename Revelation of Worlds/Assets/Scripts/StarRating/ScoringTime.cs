@@ -5,11 +5,10 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class ScoringTime : MonoBehaviour {
-    public LevelSystem levelSystem;
     public int level;
     public Text text;                                                                       // Reference to the Text component.
     public static bool isLevelUp;
-    private int i, currentLevel;
+    private int currentLevel;
     private float totalRatingTime;
 
 
@@ -19,24 +18,18 @@ public class ScoringTime : MonoBehaviour {
 
     }
 
-    // Use this for initialization
-    void Start () {
-        // Set up the reference.
-        levelSystem = FindObjectOfType<LevelSystem>();
-        i = 1;
-    }
 
     // Update is called once per frame
     private void Update()
     {
    
-        level = levelSystem.currentLevel;                                                  // starts at;
+        level = LevelSystem.currentLevel;                                                  // starts at;
         
-        if (isLevelUp == true)
-        {
-            isLevelUp = false;
-            totalRatingTime = 0;
-        }
+        //if (isLevelUp == true)
+        //{
+        //    isLevelUp = false;
+        //    totalRatingTime = 0;
+        //}
 
         if (level > 0)
         {

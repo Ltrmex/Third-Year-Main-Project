@@ -17,8 +17,6 @@ public class GameOverManager : MonoBehaviour {
     public GameObject GameOverPanel;
     public GameObject HudCanvas;
     private DataController dataController;
-    public GameObject levelSystem;
-    private LevelSystem level;
     bool isClicked = false;
 
     // Use this for initialization
@@ -26,7 +24,6 @@ public class GameOverManager : MonoBehaviour {
     {
         restartTimer = Time.time;
         dataController = FindObjectOfType<DataController>();
-        level = levelSystem.GetComponent<LevelSystem>();
     }
 
     public void Clicked() {
@@ -46,7 +43,7 @@ public class GameOverManager : MonoBehaviour {
                 HudCanvas.SetActive(false);
 
                 if(isClicked)
-                    dataController.Submit(level.currentLevel, EnemyHealth.enemyCount, ScoreManager.score);
+                    dataController.Submit(LevelSystem.currentLevel, EnemyHealth.enemyCount, ScoreManager.score);
                 // .. if it reaches the restart delay...
                 //Can be use when we'll add different levels
                 /* if (restartTimer >= restartDelay)

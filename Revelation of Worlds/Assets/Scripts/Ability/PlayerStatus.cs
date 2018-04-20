@@ -8,7 +8,7 @@ namespace Ability
 {
     public class PlayerStatus : MonoBehaviour
     {
-        private LevelSystem lvl;
+        //private LevelSystem lvl;
         GameObject experienceObject;
 
         [Header("Main Player Stats")]
@@ -22,7 +22,7 @@ namespace Ability
         private void Start()
         {
             experienceObject = GameObject.FindGameObjectWithTag("EXP");
-            lvl = experienceObject.GetComponent<LevelSystem>();
+            //lvl = experienceObject.GetComponent<LevelSystem>();
         }
 
         public int PlayerXP
@@ -58,7 +58,7 @@ namespace Ability
         private void Update()
         {
             m_PlayerXP = LevelSystem.experiencePoints;
-            m_PlayerLevel = lvl.currentLevel;
+            m_PlayerLevel = LevelSystem.currentLevel;
         }
 
 
