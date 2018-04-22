@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
+# Visual Studio 2017
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Revelation of Worlds", "Revelation of Worlds.csproj", "{E9BF7A0E-8104-CDD5-659F-551512ADB731}"
 EndProject
 Global

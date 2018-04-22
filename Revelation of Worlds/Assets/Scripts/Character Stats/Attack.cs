@@ -1,9 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class Attack : BaseClass {
-
+﻿public class Attack : BaseClass {
+    //  Set stats
     public Attack() {
         AttackPower = 20;
         Health = 50;

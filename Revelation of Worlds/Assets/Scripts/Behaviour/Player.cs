@@ -2,9 +2,9 @@
 using System.Collections;
 
 // https://www.youtube.com/watch?v=fOvf7gRO_aM
-public class Player : MonoBehaviour
-{
-
+//  Script responsible for camera control
+public class Player : MonoBehaviour {
+    //  Variables
     public Transform playerCam, character, centerPoint;
 
     private float mouseX, mouseY;
@@ -25,27 +25,26 @@ public class Player : MonoBehaviour
 
 
     // Use this for initialization
-    void Start()
-    {
-
-        zoom = -3;
-
+    void Start() {
+        zoom = -3;  //  set zoom
     }
 
     // Update is called once per frame
-    void Update()
-    {
+    void Update() {
 
-        zoom += Input.GetAxis("Mouse ScrollWheel") * zoomSpeed;
+        zoom += Input.GetAxis("Mouse ScrollWheel") * zoomSpeed; //  adjust zoom
 
+        //  Restrictions
         if (zoom > zoomMin)
             zoom = zoomMin;
 
         if (zoom < zoomMax)
             zoom = zoomMax;
 
+        //  Transform to zoom position
         playerCam.transform.localPosition = new Vector3(0, 0, zoom);
 
+        //  Responsible for rotation
         if (Input.GetMouseButton(1))
         {
             mouseX += Input.GetAxis("Mouse X");
@@ -65,8 +64,7 @@ public class Player : MonoBehaviour
 
         centerPoint.position = new Vector3(character.position.x, character.position.y + mouseYPosition, character.position.z);
 
-        if (Input.GetAxis("Vertical") > 0 | Input.GetAxis("Vertical") < 0)
-        {
+        if (Input.GetAxis("Vertical") > 0 | Input.GetAxis("Vertical") < 0) {
 
             Quaternion turnAngle = Quaternion.Euler(0, centerPoint.eulerAngles.y, 0);
 

@@ -1,7 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
+﻿//  Player Class
 public class PlayerClass {
     //  Variables
     private int attackPower;

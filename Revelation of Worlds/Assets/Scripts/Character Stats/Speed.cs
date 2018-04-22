@@ -1,9 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class Speed : BaseClass {
-
+﻿public class Speed : BaseClass {
+    //  Set basic stats
     public Speed() {
         AttackPower = 10;
         Health = 50;

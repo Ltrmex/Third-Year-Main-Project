@@ -2,7 +2,7 @@
 using UnityEngine.UI;
 
 public class CreatePlayer : MonoBehaviour {
-
+    //  Variables
     public static PlayerClass newPlayer;
     private string playerName = "Player 1";
     private CoinSystem coinsToSpend;
@@ -20,20 +20,22 @@ public class CreatePlayer : MonoBehaviour {
     // Use this for initialization
     void Start () {
         coins = GameObject.FindGameObjectWithTag("Coins");
-        coinsToSpend = coins.GetComponent<CoinSystem>();
-        newPlayer = new PlayerClass();
-        SetSpeed();
-
+        coinsToSpend = coins.GetComponent<CoinSystem>();    //  reference to coins
+        newPlayer = new PlayerClass();  //  create new player
+        SetSpeed(); //  default set to speed
     }
 
+    //  Create new player
     public void CreateNewPlayer() {
         newPlayer.PlayerLevel = 1;
         newPlayer.PlayerName = playerName;
 
+        //  Basic information
         GameInfo.PlayerLevel = newPlayer.PlayerLevel;
         GameInfo.PlayerName = newPlayer.PlayerName;
         GameInfo.PlayerC = newPlayer.PlayerC;
 
+        //  Set attribute values
         GameInfo.AttackPower = newPlayer.AttackPower.ToString();
         GameInfo.Health = newPlayer.Health.ToString();
         GameInfo.Regeneration = newPlayer.Regeneration.ToString();
@@ -42,21 +44,25 @@ public class CreatePlayer : MonoBehaviour {
         GameInfo.AttackSpeed = newPlayer.AttackSpeed.ToString();
     }
 
+    //  Set for speed
     public void SetSpeed() {
         newPlayer.PlayerC = new Speed();
         SetPoints();
     }
 
+    //  Set for defence
     public void SetDefence() {
         newPlayer.PlayerC = new Defence();
         SetPoints();
     }
 
+    //  Set for attack
     public void SetAttack() {
         newPlayer.PlayerC = new Attack();
         SetPoints();
     }
 
+    //  Set points
     private void SetPoints() {
         newPlayer.AttackPower = newPlayer.PlayerC.AttackPower;
         newPlayer.Health = newPlayer.PlayerC.Health;
@@ -79,15 +85,16 @@ public class CreatePlayer : MonoBehaviour {
         pointsText.text = coinsToSpend.totalCoins.ToString();
     }
 
+    //  Set values
     public void SetAttackPower(int amount) {
         if (newPlayer.PlayerC != null) {
-            if (amount > 0 && coinsToSpend.totalCoins > 0) {
-                newPlayer.AttackPower += amount;
-                --coinsToSpend.totalCoins;
+            if (amount > 0 && coinsToSpend.totalCoins > 0) {    //  check if coins available
+                newPlayer.AttackPower += amount;    //  increase attack power
+                --coinsToSpend.totalCoins;  //  decrement coins
             }
             else if (amount < 0 && newPlayer.AttackPower > newPlayer.PlayerC.AttackPower) {
-                newPlayer.AttackPower += amount;
-                ++coinsToSpend.totalCoins;
+                newPlayer.AttackPower -= amount; 
+                ++coinsToSpend.totalCoins;  //  refund coins
             }
             else {
                 Debug.Log("No Class Chosen!!!");
@@ -106,7 +113,7 @@ public class CreatePlayer : MonoBehaviour {
             }
             else if (amount < 0 && newPlayer.Health > newPlayer.PlayerC.Health)
             {
-                newPlayer.Health += amount;
+                newPlayer.Health -= amount;
                 ++coinsToSpend.totalCoins;
             }
             else
@@ -128,7 +135,7 @@ public class CreatePlayer : MonoBehaviour {
             }
             else if (amount < 0 && newPlayer.Regeneration > newPlayer.PlayerC.Regeneration)
             {
-                newPlayer.Regeneration += amount;
+                newPlayer.Regeneration -= amount;
                 ++coinsToSpend.totalCoins;
             }
             else
@@ -149,7 +156,7 @@ public class CreatePlayer : MonoBehaviour {
             }
             else if (amount < 0 && newPlayer.Shield > newPlayer.PlayerC.Shield)
             {
-                newPlayer.Shield += amount;
+                newPlayer.Shield -= amount;
                 ++coinsToSpend.totalCoins;
             }
             else
@@ -172,7 +179,7 @@ public class CreatePlayer : MonoBehaviour {
             }
             else if (amount < 0 && newPlayer.MovementSpeed > newPlayer.PlayerC.MovementSpeed)
             {
-                newPlayer.MovementSpeed += amount;
+                newPlayer.MovementSpeed -= amount;
                 ++coinsToSpend.totalCoins;
             }
             else
@@ -195,7 +202,7 @@ public class CreatePlayer : MonoBehaviour {
             }
             else if (amount < 0)
             {
-                newPlayer.AttackSpeed += amount;
+                newPlayer.AttackSpeed -= amount;
                 ++coinsToSpend.totalCoins;
             }
             else

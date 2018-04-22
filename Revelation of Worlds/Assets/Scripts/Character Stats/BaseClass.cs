@@ -1,7 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
+﻿//  Base class
 public class BaseClass {
     //  Variables
     private int attackPower;

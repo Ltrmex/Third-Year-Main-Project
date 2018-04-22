@@ -1,7 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
+//  Game stats information
 public class GameInfo : MonoBehaviour {
     private void Awake() {
         DontDestroyOnLoad(this.gameObject);

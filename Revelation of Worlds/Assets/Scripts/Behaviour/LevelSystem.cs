@@ -1,10 +1,9 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
+//  Responsible of keeping track of players level
 public class LevelSystem : MonoBehaviour {
-
+    //  Variables
     public static int experiencePoints;
     public static int currentLevel;
     public Text displayLevel;
@@ -13,34 +12,26 @@ public class LevelSystem : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        experiencePoints = 0;
+        experiencePoints = 0;   //  initilize experience
     }
 
 	// Update is called once per frame
 	void Update () {
-        ExperienceUpdate();
+        ExperienceUpdate(); //  update experience
 
+        //  Update values
         experienceDisplay.text = "EXP: " + experiencePoints;
         displayLevel.text = "Level: " + currentLevel;
         experienceSlider.value = experiencePoints;
     }
 
     void ExperienceUpdate() {
-        int ourLevel = (int)(0.1f * Mathf.Sqrt(experiencePoints));
+        int ourLevel = (int)(0.1f * Mathf.Sqrt(experiencePoints));  //  calculate level
 
-        if (ourLevel != currentLevel) {
-            currentLevel = ourLevel;
-            //ScoringTime.isLevelUp = true;
-            //StarRating.isLevelUp = true;
+        if (ourLevel != currentLevel) { //  check if level raised
+            currentLevel = ourLevel;    //  set new level
             DifficultyRaise.isLevelUp = true;
-        }
-        
-        int experienceNeeded = 100 * (currentLevel + 1) * (currentLevel + 1);
-        int difference = experienceNeeded - experiencePoints;
-
-        int totalDifference = experienceNeeded - (100 * currentLevel * currentLevel);
-
-        experienceSlider.maxValue = totalDifference;
+        }   //  if
 
     }   //  ExperienceUpdate()
 }
