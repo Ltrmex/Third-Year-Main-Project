@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// Author Cristina
 public class VisibleTabs : MonoBehaviour {
 
-    public GameObject tabsPanel;
-    private bool isShowing = true;
+    public GameObject tabsPanel;                                // The tab panel
+    private bool isShowing = true;                              // Is the tab panel visible or not
 
     private void Start()
     {
@@ -15,6 +16,8 @@ public class VisibleTabs : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
+        // The tabs panel is enabled or disabled - enabled in this case - by pressing they "z" key on the keyboard
+        // Once the tab is unpaused the game is unpaused
         if (Input.GetKeyDown("z"))
         {
             isShowing = !isShowing;
@@ -35,7 +38,8 @@ public class VisibleTabs : MonoBehaviour {
 
     private void exitTabs()
     {
-
+        // The tabs panel is enabled or disabled - disabled in this case - by pressing they "z" key on the keyboard
+        // Once the tab panel is disabled the game is unpaused
         if (Input.GetKeyDown("z"))
         {
             tabsPanel.SetActive(!isShowing);

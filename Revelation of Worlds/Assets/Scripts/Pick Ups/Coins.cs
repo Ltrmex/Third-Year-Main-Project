@@ -6,15 +6,15 @@ using UnityEngine;
 // Author Cristina
 public class Coins : MonoBehaviour {
     public bool playerInRange;                                                  // Whether player is within the trigger collider and can be attacked.
-    public int totalCoins = 0;
+    public int totalCoins = 0;                                                  // The total amount of couns
     public int valueCoin = 10;                                                  // One coin has a value of 10 
     public CoinSystem coinSystem;                                               // Reference to CoinSystem
 
     private void Start()
     {
-        gameObject.GetComponent<Renderer>().material.color = Color.yellow;
-        coinSystem = FindObjectOfType<CoinSystem>();
-}
+        gameObject.GetComponent<Renderer>().material.color = Color.yellow;      // It sets the object colour to yellow
+        coinSystem = FindObjectOfType<CoinSystem>();                            // It references the CoinSystem script
+    }
 
     void OnTriggerEnter(Collider player)
     {
@@ -41,12 +41,12 @@ public class Coins : MonoBehaviour {
         if (playerInRange /*&& Input.GetKeyDown("e")*/)
         {
             // gameObject.SetActive(false);
-            Destroy(gameObject);           // It calls OnDestroy method           
-        }
+            Destroy(gameObject);                                            // It calls OnDestroy method           
+        }   
     }
     
     private void OnDestroy()
     {        
-        coinSystem.CoinsAdd(valueCoin);
+        coinSystem.CoinsAdd(valueCoin);                                     // It sends the coin value to the CoinsAdd method in Coin System
     }
 }

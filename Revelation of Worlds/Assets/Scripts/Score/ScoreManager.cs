@@ -2,6 +2,7 @@
 using UnityEngine.UI;
 using System.Collections;
 
+// Code adapted from: https://unity3d.com/learn/tutorials/projects/survival-shooter-tutorial/scoring-points?playlist=17144
 public class ScoreManager : MonoBehaviour
 {
     public static int score;        // The player's score.
