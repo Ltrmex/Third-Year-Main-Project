@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
+//Author: Kamila Michel
+
 public class PauseMenu : MonoBehaviour {
 
     // Use this for initialization

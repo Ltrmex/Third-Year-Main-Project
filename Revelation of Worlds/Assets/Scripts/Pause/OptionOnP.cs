@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//Author:Kamila Michel
 public class OptionOnP : MonoBehaviour {
 
     public GameObject optionPanel;

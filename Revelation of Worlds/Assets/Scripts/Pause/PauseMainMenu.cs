@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+//Author: Kamila Michel
+
 public class PauseMainMenu : MonoBehaviour {
 
     //Medhod created for Play option from main menu
