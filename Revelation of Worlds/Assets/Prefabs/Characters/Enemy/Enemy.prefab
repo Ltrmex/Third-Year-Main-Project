@@ -880,11 +880,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 895731f36e568b544a2caca6e2618885, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingHealth: 100
+  startingHealth: 121
   currentHealth: 0
   sinkSpeed: 2.5
   scoreValue: 10
-  experienceValue: 200
+  experienceValue: 20
   deathClip: {fileID: 0}
   coin: {fileID: 1443269767947756, guid: 18d74ea4b36813a42b3a9688c5ec82c0, type: 2}
 --- !u!114 &114600283681821218

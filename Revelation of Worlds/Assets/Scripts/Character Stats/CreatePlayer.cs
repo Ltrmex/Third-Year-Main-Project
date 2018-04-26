@@ -22,7 +22,6 @@ public class CreatePlayer : MonoBehaviour {
         coins = GameObject.FindGameObjectWithTag("Coins");
         coinsToSpend = coins.GetComponent<CoinSystem>();    //  reference to coins
         newPlayer = new PlayerClass();  //  create new player
-        SetSpeed(); //  default set to speed
     }
 
     //  Create new player
@@ -88,13 +87,9 @@ public class CreatePlayer : MonoBehaviour {
     //  Set values
     public void SetAttackPower(int amount) {
         if (newPlayer.PlayerC != null) {
-            if (amount > 0 && coinsToSpend.totalCoins > 0) {    //  check if coins available
+            if (amount > 0 && coinsToSpend.totalCoins > 10) {    //  check if coins available
                 newPlayer.AttackPower += amount;    //  increase attack power
-                --coinsToSpend.totalCoins;  //  decrement coins
-            }
-            else if (amount < 0 && newPlayer.AttackPower > newPlayer.PlayerC.AttackPower) {
-                newPlayer.AttackPower -= amount; 
-                ++coinsToSpend.totalCoins;  //  refund coins
+                coinsToSpend.totalCoins -= 10;
             }
             else {
                 Debug.Log("No Class Chosen!!!");
@@ -106,15 +101,10 @@ public class CreatePlayer : MonoBehaviour {
     {
         if (newPlayer.PlayerC != null)
         {
-            if (amount > 0 && coinsToSpend.totalCoins > 0)
+            if (amount > 0 && coinsToSpend.totalCoins > 10)
             {
                 newPlayer.Health += amount;
-                --coinsToSpend.totalCoins;
-            }
-            else if (amount < 0 && newPlayer.Health > newPlayer.PlayerC.Health)
-            {
-                newPlayer.Health -= amount;
-                ++coinsToSpend.totalCoins;
+                coinsToSpend.totalCoins -= 10;
             }
             else
             {
@@ -128,15 +118,10 @@ public class CreatePlayer : MonoBehaviour {
 
         if (newPlayer.PlayerC != null)
         {
-            if (amount > 0 && coinsToSpend.totalCoins > 0)
+            if (amount > 0 && coinsToSpend.totalCoins > 10)
             {
                 newPlayer.Regeneration += amount;
-                --coinsToSpend.totalCoins;
-            }
-            else if (amount < 0 && newPlayer.Regeneration > newPlayer.PlayerC.Regeneration)
-            {
-                newPlayer.Regeneration -= amount;
-                ++coinsToSpend.totalCoins;
+                coinsToSpend.totalCoins -= 10;
             }
             else
             {
@@ -149,15 +134,10 @@ public class CreatePlayer : MonoBehaviour {
     {
         if (newPlayer.PlayerC != null)
         {
-            if (amount > 0 && coinsToSpend.totalCoins > 0)
+            if (amount > 0 && coinsToSpend.totalCoins > 10)
             {
                 newPlayer.Shield += amount;
-                --coinsToSpend.totalCoins;
-            }
-            else if (amount < 0 && newPlayer.Shield > newPlayer.PlayerC.Shield)
-            {
-                newPlayer.Shield -= amount;
-                ++coinsToSpend.totalCoins;
+                coinsToSpend.totalCoins -= 10;
             }
             else
             {
@@ -172,15 +152,10 @@ public class CreatePlayer : MonoBehaviour {
 
         if (newPlayer.PlayerC != null)
         {
-            if (amount > 0 && coinsToSpend.totalCoins > 0)
+            if (amount > 0 && coinsToSpend.totalCoins > 10)
             {
                 newPlayer.MovementSpeed += amount;
-                --coinsToSpend.totalCoins;
-            }
-            else if (amount < 0 && newPlayer.MovementSpeed > newPlayer.PlayerC.MovementSpeed)
-            {
-                newPlayer.MovementSpeed -= amount;
-                ++coinsToSpend.totalCoins;
+                coinsToSpend.totalCoins -= 10;
             }
             else
             {
@@ -195,15 +170,10 @@ public class CreatePlayer : MonoBehaviour {
 
         if (newPlayer.PlayerC != null)
         {
-            if (amount > 0 && coinsToSpend.totalCoins > 0)
-            {
-                newPlayer.AttackSpeed += amount;
-                --coinsToSpend.totalCoins;
-            }
-            else if (amount < 0)
+            if (amount > 0 && coinsToSpend.totalCoins > 10)
             {
                 newPlayer.AttackSpeed -= amount;
-                ++coinsToSpend.totalCoins;
+                coinsToSpend.totalCoins -= 10;
             }
             else
             {
